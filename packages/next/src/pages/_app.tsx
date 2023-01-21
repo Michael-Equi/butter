@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import type { AppProps } from "next/app";
 import { Provider } from "urql";
 import { client } from "../client/graphql/client";
-import Layout from "../client/components/Layout";
+import Layout from "../client/components/Containers/Layout";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../client/theme";
 

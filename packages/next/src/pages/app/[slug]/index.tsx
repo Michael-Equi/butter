@@ -2,6 +2,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import UpgradeButton from "../../../client/components/UpgradeButton";
 import { useGetProjectQuery } from "../../../client/graphql/getProject.generated";
+import Layout from "../../../client/components/Containers/Layout";
+import {
+  Button,
+  Flex,
+  Heading,
+  Spacer,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+} from "@chakra-ui/react";
 
 function Project() {
   const router = useRouter();
@@ -21,11 +34,25 @@ function Project() {
   const { project } = data;
 
   return (
-    <>
-      <h1>{project.name}</h1>
-      {!project.paidPlan && <UpgradeButton projectId={project.id} />}
-      <Link href={`/app/${project.slug}/settings`}>Settings</Link>
-    </>
+    <Layout>
+      <Flex alignItems="center">
+        <Heading size="lg">{project.name}</Heading>
+        <Spacer />
+        {!project.paidPlan && <UpgradeButton mr={4} projectId={project.id} />}
+        <Link href={`/app/${project.slug}/settings`}>
+          <Button>Settings</Button>
+        </Link>
+      </Flex>
+      <Table mt={8}>
+        <Thead>
+          <Tr>
+            <Th>Test Run Name</Th>
+            <Th>Created At</Th>
+          </Tr>
+        </Thead>
+        <Tbody></Tbody>
+      </Table>
+    </Layout>
   );
 }
 

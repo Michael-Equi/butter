@@ -6,7 +6,23 @@ import {
   GetCurrentUserWithProjectsQueryVariables,
   useGetCurrentUserWithProjectsQuery,
 } from "../../client/graphql/getCurrentUserWithProjects.generated";
-import { Button, Input } from "@chakra-ui/react";
+import {
+  Button,
+  Input,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  Text,
+  Flex,
+  Spacer,
+  Heading,
+} from "@chakra-ui/react";
+import Layout from "../../client/components/Containers/Layout";
+import { CreateProjectModal } from "../../client/components/Organisms/Modals/CreateProjectModal";
+import { EmptyState } from "../../client/components/Molecules/EmptyState";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -47,19 +63,42 @@ export default function Dashboard() {
   const hasNextPage = Boolean(pageInfo?.hasNextPage);
 
   return (
-    <>
-      <h1>Hello {data.currentUser.name}!</h1>
-      <ul>
-        {projects?.edges?.map((edge) => {
-          const project = edge?.node;
-          if (!project) return null;
-          return (
-            <li key={project.slug}>
-              <Link href={`/app/${project.slug}`}>{project.name}</Link>
-            </li>
-          );
-        })}
-      </ul>
+    <Layout>
+      <Flex>
+        <Heading size="sm">Projects</Heading>
+        <Spacer />
+        <CreateProjectModal />
+      </Flex>
+
+      <Table mt={8}>
+        <Thead>
+          <Tr>
+            <Th>ID</Th>
+            <Th>Name</Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {projects?.edges?.map((edge) => {
+            const project = edge?.node;
+            if (!project) return null;
+            return (
+              <Tr key={project.slug}>
+                <Td>{project.id}</Td>
+                <Td>
+                  <Link href={`/app/${project.slug}`}>{project.name}</Link>
+                </Td>
+              </Tr>
+            );
+          })}
+        </Tbody>
+      </Table>
+
+      {projects?.edges?.length === 0 && (
+        <EmptyState title="No pages created yet">
+          <CreateProjectModal />
+        </EmptyState>
+      )}
+
       {hasNextPage && (
         <Button
           isLoading={additionalFetching}
@@ -74,32 +113,6 @@ export default function Dashboard() {
           Load More Projects
         </Button>
       )}
-      <div>
-        <Input
-          placeholder="Hooli Inc."
-          value={name}
-          onChange={(evt) => setName(evt.target.value)}
-        />
-        <Button
-          disabled={!name}
-          onClick={() => {
-            createProject({
-              name,
-            }).then((result) => {
-              const slug = result.data?.createProject?.slug;
-              if (slug) router.push(`/app/${slug}`);
-            });
-          }}
-        >
-          Create project
-        </Button>
-        <Link href="/app/settings">
-          <Button>Settings</Button>
-        </Link>
-        <Link href="/api/auth/logout">
-          <Button>Logout</Button>
-        </Link>
-      </div>
-    </>
+    </Layout>
   );
 }

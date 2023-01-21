@@ -1,13 +1,24 @@
-import Link from "next/link";
+import NextLink from "next/link";
+import { HStack, Link } from "@chakra-ui/react";
 
 export default function Footer() {
   return (
-    <p>
+    <HStack
+      spacing={4}
+      px={4}
+      py={8}
+      maxW="8xl"
+      w="full"
+      mx="auto"
+      alignItems="center"
+    >
       © {new Date().getFullYear()}
-      {" · "}
-      <Link href="/privacy">Privacy policy</Link>
-      {" · "}
-      <Link href="/terms">Terms of Service</Link>
-    </p>
+      <Link as={NextLink} href="/privacy" color="gray.500">
+        Privacy policy
+      </Link>
+      <Link as={NextLink} href="/terms" color="gray.500">
+        Terms of Service
+      </Link>
+    </HStack>
   );
 }

@@ -42,6 +42,9 @@ export const Project = builder.prismaObject("Project", {
     users: t.relatedConnection("users", {
       cursor: "id",
     }),
+    testRuns: t.relatedConnection("testRuns", {
+      cursor: "id",
+    }),
   }),
 });
 

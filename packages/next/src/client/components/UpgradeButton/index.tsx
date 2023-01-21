@@ -1,13 +1,18 @@
 import { loadStripe } from "@stripe/stripe-js";
 import { useCreateStripeCheckoutSessionMutation } from "../../graphql/createStripeCheckoutSession.generated";
 import { PaidPlan } from "../../graphql/types.generated";
+import { BoxProps, Button, ButtonProps } from "@chakra-ui/react";
+import { FC } from "react";
 
 const PUBLIC_STRIPE_API_KEY = process.env.NEXT_PUBLIC_STRIPE_PUBLIC_API_KEY;
 
 /**
  * When clicked, redirects the user to their a Stripe Checkout session for the to upgrade to the paid plan
  */
-export default function UpgradeButton({ projectId }: { projectId: string }) {
+const UpgradeButton: FC<{ projectId: string } & ButtonProps> = ({
+  projectId,
+  ...props
+}) => {
   const [, createStripeCheckoutSession] =
     useCreateStripeCheckoutSessionMutation();
 
@@ -32,5 +37,13 @@ export default function UpgradeButton({ projectId }: { projectId: string }) {
     });
   };
 
-  return <button onClick={redirectToCheckout}>Upgrade</button>;
-}
+  return (
+    <Button variant="outline" onClick={redirectToCheckout} {...props}>
+      Upgrade
+    </Button>
+  );
+};
+/**
+ * When clicked, redirects the user to their a Stripe Checkout session for the to upgrade to the paid plan
+ */
+export default UpgradeButton;

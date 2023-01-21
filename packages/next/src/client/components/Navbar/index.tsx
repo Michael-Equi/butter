@@ -1,15 +1,32 @@
 import Link from "next/link";
 import { useGetCurrentUserQuery } from "../../graphql/getCurrentUser.generated";
-import { Button, Flex, Spacer } from "@chakra-ui/react";
+import { Button, Flex, HStack, Spacer } from "@chakra-ui/react";
 import Illustration from "../Atoms/Illustration";
+import { BsFillLightningChargeFill } from "react-icons/bs";
+import { IoIosSettings } from "react-icons/io";
+import { NavButton } from "../Atoms/NavButton";
 
 function Navbar() {
   const [{ data }] = useGetCurrentUserQuery();
   const isAuthenticated = !!data?.currentUser;
 
   return (
-    <Flex px={4} py={8} maxW="5xl" w="full" mx="auto" alignItems="center">
+    <Flex px={4} py={8} maxW="8xl" w="full" mx="auto" alignItems="center">
       <Illustration h={16} name="LogoHorizontal" />
+      {isAuthenticated && (
+        <HStack spacing={4} ml={8}>
+          <NavButton
+            href={`/app`}
+            label="Dashboard"
+            icon={BsFillLightningChargeFill}
+          />
+          <NavButton
+            href={`/app/settings`}
+            label="Settings"
+            icon={IoIosSettings}
+          />
+        </HStack>
+      )}
       <Spacer />
       {!isAuthenticated ? (
         <>
@@ -28,9 +45,6 @@ function Navbar() {
             <Button variant="outline" mr={3}>
               Logout
             </Button>
-          </Link>
-          <Link href="/app">
-            <Button variant="primary">Dashboard</Button>
           </Link>
         </>
       )}

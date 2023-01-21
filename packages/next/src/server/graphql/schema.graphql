@@ -23,7 +23,18 @@ type Project {
   name: String
   paidPlan: PaidPlan
   slug: String
+  testRuns(after: String, before: String, first: Int, last: Int): ProjectTestRunsConnection!
   users(after: String, before: String, first: Int, last: Int): ProjectUsersConnection!
+}
+
+type ProjectTestRunsConnection {
+  edges: [ProjectTestRunsConnectionEdge]!
+  pageInfo: PageInfo!
+}
+
+type ProjectTestRunsConnectionEdge {
+  cursor: String!
+  node: TestRun!
 }
 
 type ProjectUsersConnection {
@@ -39,6 +50,31 @@ type ProjectUsersConnectionEdge {
 type Query {
   currentUser: User
   project(id: String, slug: String): Project
+  test(id: String): Test
+  testRun(id: String): TestRun
+}
+
+type Test {
+  description: String!
+  id: String!
+  results: TestResult!
+  title: String!
+}
+
+type TestResult {
+  input: [String!]!
+  output: [String!]!
+  semanticSimilarity: Float!
+}
+
+type TestRun {
+  averageSimilarity: Float!
+  configFile: String!
+  id: String!
+  name: String!
+  project: Project!
+  tags: String
+  testsFile: String!
 }
 
 type User {
