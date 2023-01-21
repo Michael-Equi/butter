@@ -68,14 +68,17 @@ type TestResult {
 }
 
 type TestRun {
-  averageSimilarity: Float!
+  averageSimilarity: Float
+  branch: String!
+  commitId: String!
   configFile: String!
+  createdAt: Float!
   id: String!
-  jaccardSimilarity: Float!
+  jaccardSimilarity: Float
   name: String!
   project: Project!
-  sentimentExpected: Float!
-  sentimentReturned: Float!
+  sentimentExpected: Float
+  sentimentReturned: Float
   tags: String
   tests(after: String, before: String, first: Int, last: Int): TestRunTestsConnection!
   testsFile: String!

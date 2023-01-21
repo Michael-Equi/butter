@@ -8,10 +8,13 @@ export const TestRun = builder.prismaObject("TestRun", {
     configFile: t.exposeString("configFile"),
     testsFile: t.exposeString("testsFile"),
     tags: t.exposeString("tags", { nullable: true }),
-    averageSimilarity: t.exposeFloat("averageSimilarity"),
-    jaccardSimilarity: t.exposeFloat("jaccardSimilarity"),
-    sentimentExpected: t.exposeFloat("sentimentExpected"),
-    sentimentReturned: t.exposeFloat("sentimentReturned"),
+    createdAt: t.exposeFloat("createdAt" as never),
+    commitId: t.exposeString("commitId"),
+    branch: t.exposeString("branch"),
+    averageSimilarity: t.exposeFloat("averageSimilarity", { nullable: true }),
+    jaccardSimilarity: t.exposeFloat("jaccardSimilarity", { nullable: true }),
+    sentimentExpected: t.exposeFloat("sentimentExpected", { nullable: true }),
+    sentimentReturned: t.exposeFloat("sentimentReturned", { nullable: true }),
 
     project: t.relation("project"),
     tests: t.relatedConnection("tests", {

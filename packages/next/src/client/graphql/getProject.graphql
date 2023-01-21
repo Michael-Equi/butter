@@ -15,6 +15,8 @@ query GetProject($id: String, $slug: String) {
           jaccardSimilarity
           sentimentExpected
           sentimentReturned
+          commitId
+          branch
           tests {
             edges {
               node {
