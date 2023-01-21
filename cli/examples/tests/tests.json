@@ -1,0 +1,44 @@
+{
+    "tests": [
+        {
+            "question": "Hi, for some reason my pod for running Rstudio is not starting. I've tried several times at this point and still have the same problem.",
+            "answer": "Hi Colin!  Your pod is running out of storage. You need to upgrade the storage by clicking \"pod → settings → increase storage. Let us know if this works for you!\""
+        },
+        {
+            "question": "Hi, I am having issues with my pod not starting. Any suggestions on how to fix this?",
+            "answer": ""
+        },
+        {
+            "question": "Writing the Dockerfile is straightforward, I think I've written all the essential stuff in it. Now I'm working on the third step. Two quick questions:\nWould you recommend writing the script as a separate file in scripts dir and calling it via subprocess, or writing it as a function within wf/__init__.py?\nHow do I read LatchFile objects as strings, line by line?",
+            "answer": ""
+        },
+        {
+            "question": "Still waiting on r1.fastq to load to the console; from the creation date it's been 6hours.  Also I tried to re-import the project from basespace, been waiting on those files for 2 hours.  Is the issue that the queue is jammed?",
+            "answer": "Kenny; FASTQ uploads are temporarily under a bit of load. \nJames It was an issue on our side, thank you for flagging and being patient with us."
+        },
+        {
+            "question": "Hi I ran into the same error as before with the Rstudio. I was running it with 8 cores and 50GB of memory and i received an error in R that seemed I had insufficient RAM to run our analysis. So I increased to 16 Cores to troubleshoot but now I can no longer start Rstudio. Do I need to start a new pod if I want to switch the cores midway? Also will the installed libraries be maintained between different pods?",
+            "answer": "We will manually increase the size of your machine. There was a bug where storage is not actually resizeable."
+        },
+        {
+            "question": "Hey guys, I'm getting some annoying automatic retry behavior in my workflow executions.  It seems to be happening even when the task succeeds, which is increasing execution time.  When the retry occurs, the displayed logs are overwritten so I can't see what happened.  Any recommendations?  Can I switch off the retries?",
+            "answer": "Much apologies for this! Can you try specifying retries=0 on the task decorator as specified in the docs here: https://docs.latch.bio/basics/retries.html?highlight=retries"
+        },
+        {
+            "question": "Is there a way to disable automatic retries in my workflow executions? I'm seeing them occur even when the task succeeds and they are increasing execution time. Additionally, the logs are being overwritten which makes it difficult to view what happened. Are there any suggestions on how to fix this issue?",
+            "answer": ""
+        },
+        {
+            "question": "hey Hannah Le when I try to use 'latch exec' I'm getting a ValueError: Unable to find requested task name - make sure that you are in the correct workspace.",
+            "answer": "We had to white-label his account for permission."
+        },
+        {
+            "question": "also, liked the price update on twitter. Related: can I get some more credits on my personal?  Everything's been defaulting to that account.  Alternatively, can someone show me how to push stuff to the group AtlasXomics account?",
+            "answer": "We deposited more credits to his account & sent documentation on pushing stuff to a team workspace."
+        },
+        {
+            "question": "Hi, we are having difficulty again starting the pod. Could you take a look? Nvm I got it to start! It was sitting at \"Starting\" for a very long time this morning, and I wasn't actually able to open RStudio",
+            "answer": "We told them  to wait 1-2 mins and the pod would start, added this to our docs."
+        }
+    ]
+}
