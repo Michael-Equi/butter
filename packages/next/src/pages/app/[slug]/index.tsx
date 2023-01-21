@@ -10,10 +10,11 @@ import {
   Spacer,
   Table,
   Tbody,
-  Td,
+  Box,
   Th,
   Thead,
   Tr,
+  Td,
 } from "@chakra-ui/react";
 
 function Project() {
@@ -43,15 +44,35 @@ function Project() {
           <Button>Settings</Button>
         </Link>
       </Flex>
-      <Table mt={8}>
-        <Thead>
-          <Tr>
-            <Th>Test Run Name</Th>
-            <Th>Created At</Th>
-          </Tr>
-        </Thead>
-        <Tbody></Tbody>
-      </Table>
+      <Box p={4} bg="bg-surface" mt={8} borderRadius="lg" boxShadow="sm">
+        <Table>
+          <Thead>
+            <Tr>
+              <Th>ID</Th>
+              <Th>Name</Th>
+              <Th>Ran At</Th>
+              <Th>Average Score</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            {project?.testRuns?.edges?.map((edge) => {
+              const testRun = edge?.node;
+              if (!testRun) return null;
+              return (
+                <Link
+                  href={`/app/${project.slug}/testRun/${testRun.id}`}
+                  key={testRun.id}
+                >
+                  <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
+                    <Td>{testRun.id}</Td>
+                    <Td>{testRun.name}</Td>
+                  </Tr>
+                </Link>
+              );
+            })}
+          </Tbody>
+        </Table>
+      </Box>
     </Layout>
   );
 }

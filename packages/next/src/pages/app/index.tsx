@@ -82,12 +82,14 @@ export default function Dashboard() {
             const project = edge?.node;
             if (!project) return null;
             return (
-              <Tr key={project.slug}>
-                <Td>{project.id}</Td>
-                <Td>
-                  <Link href={`/app/${project.slug}`}>{project.name}</Link>
-                </Td>
-              </Tr>
+              <Link href={`/app/${project.slug}`} key={project.slug}>
+                <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
+                  <Td>{project.id}</Td>
+                  <Td>
+                    <Link href={`/app/${project.slug}`}>{project.name}</Link>
+                  </Td>
+                </Tr>
+              </Link>
             );
           })}
         </Tbody>

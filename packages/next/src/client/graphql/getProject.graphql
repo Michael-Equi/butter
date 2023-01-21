@@ -4,5 +4,33 @@ query GetProject($id: String, $slug: String) {
     name
     slug
     paidPlan
+    testRuns {
+      edges {
+        node {
+          id
+          testsFile
+          name
+          tags
+          averageSimilarity
+          jaccardSimilarity
+          sentimentExpected
+          sentimentReturned
+          tests {
+            edges {
+              node {
+                id
+                title
+                description
+                results {
+                  input
+                  output
+                  semanticSimilarity
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

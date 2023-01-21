@@ -57,7 +57,7 @@ type Query {
 type Test {
   description: String!
   id: String!
-  results: TestResult!
+  results: [TestResult!]!
   title: String!
 }
 
@@ -71,10 +71,24 @@ type TestRun {
   averageSimilarity: Float!
   configFile: String!
   id: String!
+  jaccardSimilarity: Float!
   name: String!
   project: Project!
+  sentimentExpected: Float!
+  sentimentReturned: Float!
   tags: String
+  tests(after: String, before: String, first: Int, last: Int): TestRunTestsConnection!
   testsFile: String!
+}
+
+type TestRunTestsConnection {
+  edges: [TestRunTestsConnectionEdge]!
+  pageInfo: PageInfo!
+}
+
+type TestRunTestsConnectionEdge {
+  cursor: String!
+  node: Test!
 }
 
 type User {

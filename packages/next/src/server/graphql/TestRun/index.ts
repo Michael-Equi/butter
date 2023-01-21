@@ -9,6 +9,9 @@ export const TestRun = builder.prismaObject("TestRun", {
     testsFile: t.exposeString("testsFile"),
     tags: t.exposeString("tags", { nullable: true }),
     averageSimilarity: t.exposeFloat("averageSimilarity"),
+    jaccardSimilarity: t.exposeFloat("jaccardSimilarity"),
+    sentimentExpected: t.exposeFloat("sentimentExpected"),
+    sentimentReturned: t.exposeFloat("sentimentReturned"),
 
     project: t.relation("project"),
     tests: t.relatedConnection("tests", {

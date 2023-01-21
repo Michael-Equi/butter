@@ -38,6 +38,11 @@ model Project {
   testRuns TestRun[]
 }
 
+enum SentimentDifference {
+  Plus
+  Minus
+}
+
 model TestRun {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt  DateTime @default(now())
@@ -47,6 +52,9 @@ model TestRun {
   testsFile String
   tags String?
   averageSimilarity Float?
+  jaccardSimilarity Float?
+  sentimentExpected Float? // -1 to 1
+  sentimentReturned Float? // -1 to 1
 
   projectId   String   @db.ObjectId
   project     Project  @relation(fields: [projectId], references: [id])
@@ -68,6 +76,7 @@ model Test {
 
   title String
   description String
+  topFiveWords String[] @default([])
   results TestResult[]
 
   testRunId String @db.ObjectId
