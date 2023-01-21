@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { Button, Input, Stack } from "@chakra-ui/react";
+import * as React from "react";
 
 /**
  * Used on the Login and Sign Up screens to handle authentication. Can be shared between those as Passport.js doesn't differentiate between logging in and signing up.
@@ -34,13 +36,17 @@ export default function AuthenticationForm() {
           });
       }}
     >
-      <input
-        type="email"
-        placeholder="me@hello.com"
-        value={email}
-        onChange={(evt) => setEmail(evt.target.value)}
-      />
-      <button type="submit">Let's go!</button>
+      <Stack spacing="4">
+        <Input
+          placeholder="Enter your email"
+          type="email"
+          value={email}
+          onChange={(evt) => setEmail(evt.target.value)}
+        />
+        <Button variant="primary" type="submit">
+          Continue with email
+        </Button>
+      </Stack>
     </form>
   );
 }

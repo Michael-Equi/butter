@@ -6,6 +6,7 @@ import {
   GetCurrentUserWithProjectsQueryVariables,
   useGetCurrentUserWithProjectsQuery,
 } from "../../client/graphql/getCurrentUserWithProjects.generated";
+import { Button, Input } from "@chakra-ui/react";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -60,8 +61,9 @@ export default function Dashboard() {
         })}
       </ul>
       {hasNextPage && (
-        <button
-          disabled={additionalFetching}
+        <Button
+          isLoading={additionalFetching}
+          variant="primary"
           onClick={() => {
             setVariables((prevVariables) => ({
               ...prevVariables,
@@ -69,16 +71,16 @@ export default function Dashboard() {
             }));
           }}
         >
-          {additionalFetching ? "Fetching..." : "Load more projects"}
-        </button>
+          Load More Projects
+        </Button>
       )}
       <div>
-        <input
+        <Input
           placeholder="Hooli Inc."
           value={name}
           onChange={(evt) => setName(evt.target.value)}
         />
-        <button
+        <Button
           disabled={!name}
           onClick={() => {
             createProject({
@@ -90,9 +92,13 @@ export default function Dashboard() {
           }}
         >
           Create project
-        </button>
-        <Link href="/app/settings">Settings</Link>
-        <Link href="/api/auth/logout">Logout</Link>
+        </Button>
+        <Link href="/app/settings">
+          <Button>Settings</Button>
+        </Link>
+        <Link href="/api/auth/logout">
+          <Button>Logout</Button>
+        </Link>
       </div>
     </>
   );
