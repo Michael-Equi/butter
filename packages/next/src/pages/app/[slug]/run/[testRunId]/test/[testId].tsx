@@ -6,6 +6,7 @@ import {
   Code,
   Heading,
   HStack,
+  SimpleGrid,
   Table,
   Tbody,
   Td,
@@ -23,6 +24,8 @@ import dayjs from "dayjs";
 import testRunIdPage from "../index";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import Link from "next/link";
+import { BadgeIndicator } from "../../../../../../client/components/Atoms/BadgeIndicator";
+import { Stat } from "../../../../../../client/components/Molecules/Stat";
 
 dayjs.extend(LocalizedFormat);
 
@@ -32,14 +35,16 @@ const Test: NextPage = () => {
   const [{ data: projectData }] = useGetProjectQuery({
     variables: { slug: slug as string },
   });
-  const [{ data: testRunData }] = useGetTestRunQuery({
-    variables: { id: testRunId as string },
-  });
+  const [{ data: testRunData, fetching: testRunFetching }] = useGetTestRunQuery(
+    {
+      variables: { id: testRunId as string },
+    }
+  );
   const [{ data, fetching, error }] = useGetTestQuery({
     variables: { id: testId as string },
   });
 
-  if (fetching) return <p>Loading...</p>;
+  if (fetching || testRunFetching) return <p>Loading...</p>;
 
   if (error) return <p>{error.message}</p>;
 
@@ -80,6 +85,29 @@ const Test: NextPage = () => {
           <Code ml={2}>{testRun.commitId}</Code>
         </Text>
       </HStack>
+
+      <SimpleGrid columns={{ base: 1, md: 4 }} gap={5} mt={5}>
+        <Stat
+          value={test.averageSemanticSimilarity ?? "N/A"}
+          label="Average Semantic Similarity"
+          delta={{
+            value: "12%",
+            isUpwardsTrend: true,
+          }}
+        />
+        <Stat
+          value={test.averageJaccardSimilarity ?? "N/A"}
+          label="Average Jaccard Similarity"
+        />
+        <Stat
+          value={test.averageTestSentiment ?? "N/A"}
+          label="Test Sentiment"
+        />
+        <Stat
+          value={test.averageExpectedSentiment ?? "N/A"}
+          label="Expected Sentiment"
+        />
+      </SimpleGrid>
       <Box
         mt={4}
         px={{ base: "4", md: "6" }}
@@ -89,13 +117,14 @@ const Test: NextPage = () => {
         boxShadow={useColorModeValue("sm", "sm-dark")}
       >
         <Heading size="sm">Cases</Heading>
-        <Table mt={4}>
+        <Table mt={4} wordBreak="break-word" whiteSpace="normal">
           <Thead>
             <Tr>
               <Th>Input</Th>
               <Th>Output</Th>
               <Th>Expected Output</Th>
               <Th>Jaccard Similarity</Th>
+              <Th>Semantic Similarity</Th>
               <Th>Avg. Expected Sentiment</Th>
               <Th>Avg. Test Sentiment</Th>
             </Tr>
@@ -103,13 +132,27 @@ const Test: NextPage = () => {
           <Tbody>
             {test?.cases?.map((testCase) => (
               <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
-                <Td>{testCase.input[0]}</Td>
-                <Td>{testCase.output[0]}</Td>
+                <Td>{testCase.inputs[0]}</Td>
+                <Td>{testCase.outputs[0]}</Td>
                 <Td>{testCase.expected[0]}</Td>
-                <Td>{testCase.expectedSentiment}</Td>
-                <Td>{test.averageJaccardSimilarity}</Td>
-                <Td>{test.averageExpectedSentiment}</Td>
-                <Td>{test.averageTestSentiment}</Td>
+                <Td>
+                  <BadgeIndicator
+                    value={testCase.jaccardSimilarity ?? undefined}
+                  />
+                </Td>
+                <Td>
+                  <BadgeIndicator
+                    value={testCase.semanticSimilarity ?? undefined}
+                  />
+                </Td>
+                <Td>
+                  <BadgeIndicator
+                    value={testCase.expectedSentiment ?? undefined}
+                  />
+                </Td>
+                <Td>
+                  <BadgeIndicator value={testCase.testSentiment ?? undefined} />
+                </Td>
               </Tr>
             ))}
           </Tbody>

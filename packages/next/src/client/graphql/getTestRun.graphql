@@ -22,8 +22,8 @@ query GetTestRun($id: String) {
                     averageExpectedSentiment
                     averageTestSentiment
                     cases {
-                        input
-                        output
+                        inputs
+                        outputs
                         semanticSimilarity
                         jaccardSimilarity
                         expectedSentiment

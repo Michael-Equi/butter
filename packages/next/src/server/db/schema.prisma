@@ -50,8 +50,8 @@ model TestRun {
   name       String
   commitId  String
   branch    String
-  configFile String
-  testsFile String
+  configFile String?
+  testsFile String?
   tags String?
   averageSemanticSimilarity Float?
   averageJaccardSimilarity Float?
@@ -66,8 +66,8 @@ model TestRun {
 }
 
 type TestResult {
-  input String[]
-  output String[]
+  inputs String[]
+  outputs String[]
   expected String[]
   semanticSimilarity Float
   jaccardSimilarity Float
@@ -78,8 +78,8 @@ type TestResult {
 
 model Test {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  createdAt  DateTime @default(now())
-  updatedAt DateTime @default(now()) @updatedAt
+  createdAt  DateTime? @default(now())
+  updatedAt DateTime? @default(now()) @updatedAt
 
   title String
   description String
