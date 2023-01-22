@@ -1469,9 +1469,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@butter/bedrock@workspace:packages/next":
+"@butter/next@workspace:packages/next":
   version: 0.0.0-use.local
-  resolution: "@butter/bedrock@workspace:packages/next"
+  resolution: "@butter/next@workspace:packages/next"
   dependencies:
     "@babel/core": ^7.18.10
     "@babel/preset-env": ^7.18.10
