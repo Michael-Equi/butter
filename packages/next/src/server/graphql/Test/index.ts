@@ -5,7 +5,11 @@ export const TestResult = builder.simpleObject("TestResult", {
   fields: (t) => ({
     input: t.stringList(),
     output: t.stringList(),
+    expected: t.stringList(),
     semanticSimilarity: t.float(),
+    jaccardSimilarity: t.float(),
+    testSentiment: t.float(),
+    expectedSentiment: t.float(),
   }),
 });
 
@@ -14,7 +18,19 @@ export const Test = builder.prismaObject("Test", {
     id: t.exposeString("id", { nullable: false }),
     title: t.exposeString("title"),
     description: t.exposeString("description"),
-    results: t.field({ type: [TestResult], resolve: (test) => test.results }),
+    averageSemanticSimilarity: t.exposeFloat("averageSemanticSimilarity", {
+      nullable: true,
+    }),
+    averageJaccardSimilarity: t.exposeFloat("averageJaccardSimilarity", {
+      nullable: true,
+    }),
+    averageExpectedSentiment: t.exposeFloat("averageExpectedSentiment", {
+      nullable: true,
+    }),
+    averageTestSentiment: t.exposeFloat("averageTestSentiment", {
+      nullable: true,
+    }),
+    cases: t.field({ type: [TestResult], resolve: (test) => test.cases }),
   }),
 });
 

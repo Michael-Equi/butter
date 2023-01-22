@@ -17,7 +17,7 @@ const brown = {
 
 export const theme: Record<string, any> = extendTheme({
   config: {
-    initialColorMode: "dark",
+    initialColorMode: "light",
     useSystemColorMode: false,
   },
   ...foundations,

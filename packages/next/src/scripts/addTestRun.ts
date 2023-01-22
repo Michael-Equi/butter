@@ -23,7 +23,7 @@ const addTestRun = async () => {
             {
               title: "Test 1",
               description: "Example Test",
-              results: {
+              cases: {
                 set: [
                   {
                     input: [

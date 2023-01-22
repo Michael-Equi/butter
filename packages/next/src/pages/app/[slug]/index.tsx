@@ -15,7 +15,13 @@ import {
   Thead,
   Tr,
   Td,
+  Code,
 } from "@chakra-ui/react";
+import dayjs from "dayjs";
+import LocalizedFormat from "dayjs/plugin/localizedFormat";
+import { BadgeIndicator } from "../../../client/components/Atoms/BadgeIndicator";
+
+dayjs.extend(LocalizedFormat);
 
 function Project() {
   const router = useRouter();
@@ -48,10 +54,12 @@ function Project() {
         <Table>
           <Thead>
             <Tr>
-              <Th>ID</Th>
+              <Th>Commit</Th>
+              <Th>Branch</Th>
               <Th>Name</Th>
               <Th>Ran At</Th>
-              <Th>Average Score</Th>
+              <Th>Avg Similarity</Th>
+              <Th>Jaccard Similarity</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -60,12 +68,28 @@ function Project() {
               if (!testRun) return null;
               return (
                 <Link
-                  href={`/app/${project.slug}/testRun/${testRun.id}`}
+                  href={`/app/${project.slug}/run/${testRun.id}`}
                   key={testRun.id}
                 >
                   <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
-                    <Td>{testRun.id}</Td>
+                    <Td>
+                      <Code>{testRun.branch}</Code>
+                    </Td>
+                    <Td>
+                      <Code>{testRun.commitId}</Code>
+                    </Td>
                     <Td>{testRun.name}</Td>
+                    <Td>{dayjs(testRun.createdAt).format("LLL")}</Td>
+                    <Td>
+                      <BadgeIndicator
+                        value={testRun.averageSimilarity ?? undefined}
+                      />
+                    </Td>
+                    <Td>
+                      <BadgeIndicator
+                        value={testRun.jaccardSimilarity ?? undefined}
+                      />
+                    </Td>
                   </Tr>
                 </Link>
               );
