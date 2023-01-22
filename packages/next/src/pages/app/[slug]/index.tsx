@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import UpgradeButton from "../../../client/components/UpgradeButton";
 import { useGetProjectQuery } from "../../../client/graphql/getProject.generated";
@@ -17,44 +18,71 @@ import {
   Td,
   Code,
   Text,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem
 } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import { BadgeIndicator } from "../../../client/components/Atoms/BadgeIndicator";
+<<<<<<< HEAD
 import { CopyBox } from "../../../client/components/Atoms/CopyBox";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+=======
+import { Line } from "react-chartjs-2";
+import { theme } from "../../../client/theme";
+>>>>>>> e58711e (add graphg)
 
 dayjs.extend(LocalizedFormat);
 
-Chart.register(ArcElement, Tooltip, Legend)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
-const donutData : ChartData<"doughnut", number[], string> = {
-  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-  datasets: [
-    {
-      label: "# of Votes",
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(255, 206, 86, 0.2)",
-        "rgba(75, 192, 192, 0.2)",
-        "rgba(153, 102, 255, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
-      ],
-      borderColor: [
-        "rgba(255, 99, 132, 1)",
-        "rgba(54, 162, 235, 1)",
-        "rgba(255, 206, 86, 1)",
-        "rgba(75, 192, 192, 1)",
-        "rgba(153, 102, 255, 1)",
-        "rgba(255, 159, 64, 1)",
-      ],
-      borderWidth: 1,
+const lineOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top" as const,
     },
-  ],
+    title: {
+      display: false,
+      text: "",
+    },
+  },
 };
+
+function extractAndNormalize(object: any, key: string): number[] {
+  const data = object.map((item: any) => item[key]);
+  if (!data) return [];
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const range = max - min;
+  const normalized = (data as number[]).map((value) => {
+    return (value - min) / range;
+  });
+  console.log(normalized);
+  return normalized;
+}
 
 function Project() {
   const router = useRouter();
@@ -65,6 +93,8 @@ function Project() {
     },
   });
 
+  const [branch, setBranch] = useState("all");
+
   if (fetching) return <p>Loading...</p>;
 
   if (error) return <p>{error.message}</p>;
@@ -72,6 +102,54 @@ function Project() {
   if (!data?.project || typeof slug !== "string") return <p>Not found.</p>;
 
   const { project } = data;
+
+  const allTestRuns = (() => {
+    return project?.testRuns?.edges
+      ?.map((edge) => {
+        const testRun = edge?.node;
+        if (!testRun) return null;
+        return testRun;
+      })
+      .filter((testRun) => Boolean(testRun));
+  })();
+
+  const branches = allTestRuns
+    .map((testRun) => testRun.branch)
+    .filter((branch, index, self) => self.indexOf(branch) === index);
+
+  const testRuns = allTestRuns.filter((testRun) => {
+    return testRun?.branch === branch || branch === "all";
+  });
+
+  const chartData = (() => {
+    const labels = Array.from(testRuns.keys()).map((x) => `${x + 1}`);
+    const datasets = [
+      {
+        label: "Average Test Sentiment",
+        data: extractAndNormalize(testRuns, "averageTestSentiment"),
+        borderColor: theme.colors.blue[500],
+      },
+      {
+        label: "Average Semantic Similarity",
+        data: extractAndNormalize(testRuns, "averageSemanticSimilarity"),
+        borderColor: theme.colors.green[500],
+      },
+      {
+        label: "Average Expected Sentiment",
+        data: extractAndNormalize(testRuns, "averageExpectedSentiment"),
+        borderColor: theme.colors.orange[500],
+      },
+      {
+        label: "Average Jaccard Similarity",
+        data: extractAndNormalize(testRuns, "averageJaccardSimilarity"),
+        borderColor: theme.colors.red[500],
+      },
+    ];
+    return {
+      labels,
+      datasets,
+    };
+  })();
 
   return (
     <Layout>
@@ -91,8 +169,21 @@ function Project() {
           <Button>Settings</Button>
         </Link>
       </Flex>
+      <Box padding="12">
+        <Line options={lineOptions} data={chartData} />
+      </Box>
       <Box>
-      <Doughnut data={donutData} />
+        <Menu>
+          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+            {branch == "all" ? "Select branch" : branch}
+          </MenuButton>
+          <MenuList>
+            <MenuItem onClick={() => setBranch("all")}>All</MenuItem>
+            {branches.map((branch) => (
+              <MenuItem onClick={() => setBranch(branch)}>{branch}</MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
       </Box>
       <Box p={4} bg="bg-surface" mt={8} borderRadius="lg" boxShadow="sm">
         <Table>
@@ -107,9 +198,8 @@ function Project() {
             </Tr>
           </Thead>
           <Tbody>
-            {project?.testRuns?.edges?.map((edge) => {
-              const testRun = edge?.node;
-              if (!testRun) return null;
+            {testRuns.map((testRun) => {
+              if (testRun == null) return null;
               return (
                 <Link
                   href={`/app/${project.slug}/run/${testRun.id}`}

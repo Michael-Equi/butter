@@ -1476,6 +1476,7 @@ __metadata:
     "@babel/core": ^7.18.10
     "@babel/preset-env": ^7.18.10
     "@babel/preset-typescript": ^7.18.6
+    "@chakra-ui/icons": ^2.0.17
     "@chakra-ui/react": ^2.4.9
     "@emotion/react": ^11.10.5
     "@emotion/styled": ^11.10.5
@@ -1843,6 +1844,18 @@ __metadata:
     "@chakra-ui/system": ">=2.0.0"
     react: ">=18"
   checksum: c0ac66946fe8950e7daaa2462f00f2f7d4ce41878b9f26451c0c94c75887f4ae49f86883c4d7c2728243e5c182b9530e752ec9817c7672e0f852bde8353b2039
+  languageName: node
+  linkType: hard
+
+"@chakra-ui/icons@npm:^2.0.17":
+  version: 2.0.17
+  resolution: "@chakra-ui/icons@npm:2.0.17"
+  dependencies:
+    "@chakra-ui/icon": 3.0.16
+  peerDependencies:
+    "@chakra-ui/system": ">=2.0.0"
+    react: ">=18"
+  checksum: cb0d6f431d162f7d8d50ee33b887bb64f490109cc077bf176bea17ddca32c926b0caaab1013f05186be52ee42f261ff9d4e7af50744a03d51de356b4470e0ee2
   languageName: node
   linkType: hard
 
