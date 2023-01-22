@@ -3,6 +3,7 @@ import time
 import json
 import requests
 from tqdm import tqdm
+import git
 
 def test(json_file: str, desc: str=""):
     def dec(func):
@@ -45,15 +46,15 @@ class Butter:
                     "output": output,
                     "answer": prompt["answer"],
                     "meta": meta,
-                    "argss": args
+                    "args": args
                 })
 
             end = time.time()
 
             tests.append({
-                "name": test.__name__,
+                "title": test.__name__,
                 "description": desc,
-                "json_file": json_file,
+                "jsonFile": json_file,
                 "cases": cases
                 })
 
@@ -62,18 +63,20 @@ class Butter:
 
 
         # TODO Attach commit id and branch name
+        repo = git.Repo(self.path, search_parent_directories=True)
+
         # Create a post request
         url = "https://www.example.com"
         data = {
             "tests": tests,
             "path": str(self.path),
-            "commit": "",
-            "branch": "",
+            "commit": repo.head.object.hexsha,
+            "branch": repo.active_branch.name,
             }
         headers = {'Content-type': 'application/json'}
         requests.post(url, data=data, headers=headers)
         
         # Save data to a json file
         with open(self.path / "data_dump.json", 'w+') as f:
-            json.dump(tests, f)
+            json.dump(data, f)
     

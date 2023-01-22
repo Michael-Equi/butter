@@ -7,6 +7,6 @@ setup(
    author='Michael Equi',
    author_email='michaelequi@berkeley.edu',
    packages=['butter'],  #same as name
-   install_requires=['typer'], #external packages as dependencies
+   install_requires=['typer', 'gitpython'], #external packages as dependencies
 #    scripts=['butter_cli/butter_cli.py']
 )
