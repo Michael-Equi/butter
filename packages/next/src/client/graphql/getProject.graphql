@@ -8,29 +8,16 @@ query GetProject($id: String, $slug: String) {
       edges {
         node {
           id
+          createdAt
           testsFile
           name
           tags
-          averageSimilarity
-          jaccardSimilarity
-          sentimentExpected
-          sentimentReturned
+          averageSemanticSimilarity
+          averageJaccardSimilarity
+          averageExpectedSentiment
+          averageTestSentiment
           commitId
           branch
-          tests {
-            edges {
-              node {
-                id
-                title
-                description
-                results {
-                  input
-                  output
-                  semanticSimilarity
-                }
-              }
-            }
-          }
         }
       }
     }

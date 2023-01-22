@@ -53,10 +53,11 @@ model TestRun {
   configFile String
   testsFile String
   tags String?
-  averageSimilarity Float?
-  jaccardSimilarity Float?
-  sentimentExpected Float? // -1 to 1
-  sentimentReturned Float? // -1 to 1
+  averageSemanticSimilarity Float?
+  averageJaccardSimilarity Float?
+  averageExpectedSentiment Float? // -1 to 1
+  averageTestSentiment Float? // -1 to 1
+
 
   projectId   String   @db.ObjectId
   project     Project  @relation(fields: [projectId], references: [id])
@@ -67,8 +68,12 @@ model TestRun {
 type TestResult {
   input String[]
   output String[]
-  data Json?
+  expected String[]
   semanticSimilarity Float
+  jaccardSimilarity Float
+  expectedSentiment Float
+  testSentiment Float
+  data Json?
 }
 
 model Test {
@@ -78,8 +83,12 @@ model Test {
 
   title String
   description String
-  topFiveWords String[] @default([])
-  results TestResult[]
+  cases TestResult[]
+
+  averageSemanticSimilarity Float?
+  averageJaccardSimilarity Float?
+  averageExpectedSentiment Float? // -1 to 1
+  averageTestSentiment Float? // -1 to 1
 
   testRunId String @db.ObjectId
   testRun TestRun @relation(fields: [testRunId], references: [id])

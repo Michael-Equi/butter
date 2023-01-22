@@ -1,0 +1,36 @@
+query GetTestRun($id: String) {
+    testRun(id: $id) {
+        id
+        testsFile
+        name
+        tags
+        createdAt
+        averageSemanticSimilarity
+        averageJaccardSimilarity
+        averageExpectedSentiment
+        averageTestSentiment
+        commitId
+        branch
+        tests {
+            edges {
+                node {
+                    id
+                    title
+                    description
+                    averageSemanticSimilarity 
+                    averageJaccardSimilarity 
+                    averageExpectedSentiment
+                    averageTestSentiment
+                    cases {
+                        input
+                        output
+                        semanticSimilarity
+                        jaccardSimilarity
+                        expectedSentiment
+                        testSentiment
+                    }
+                }
+            }
+        }
+    }
+}

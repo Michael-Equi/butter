@@ -55,30 +55,38 @@ type Query {
 }
 
 type Test {
+  averageExpectedSentiment: Float
+  averageJaccardSimilarity: Float
+  averageSemanticSimilarity: Float
+  averageTestSentiment: Float
+  cases: [TestResult!]!
   description: String!
   id: String!
-  results: [TestResult!]!
   title: String!
 }
 
 type TestResult {
+  expected: [String!]!
+  expectedSentiment: Float!
   input: [String!]!
+  jaccardSimilarity: Float!
   output: [String!]!
   semanticSimilarity: Float!
+  testSentiment: Float!
 }
 
 type TestRun {
-  averageSimilarity: Float
+  averageExpectedSentiment: Float
+  averageJaccardSimilarity: Float
+  averageSemanticSimilarity: Float
+  averageTestSentiment: Float
   branch: String!
   commitId: String!
   configFile: String!
   createdAt: Float!
   id: String!
-  jaccardSimilarity: Float
   name: String!
   project: Project!
-  sentimentExpected: Float
-  sentimentReturned: Float
   tags: String
   tests(after: String, before: String, first: Int, last: Int): TestRunTestsConnection!
   testsFile: String!

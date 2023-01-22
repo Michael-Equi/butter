@@ -1,0 +1,20 @@
+query GetTest($id: String) {
+    test(id: $id) {
+        id
+        averageExpectedSentiment
+        averageJaccardSimilarity
+        averageSemanticSimilarity
+        averageTestSentiment
+        title
+        description
+        cases {
+            expectedSentiment
+            jaccardSimilarity
+            semanticSimilarity
+            testSentiment
+            input
+            output
+            expected
+        }
+    }
+}
