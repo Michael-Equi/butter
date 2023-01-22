@@ -71,7 +71,7 @@ class Butter:
         repo = git.Repo(self.path, search_parent_directories=True)
 
         # Create a post request
-        url = "https://www.example.com"
+        url = "https://butter-production.up.railway.app/run_analytics"
         data = {
             "projectId": self.id,
             "tests": tests,
@@ -81,7 +81,7 @@ class Butter:
             "description": self.description
             }
         headers = {'Content-type': 'application/json'}
-        requests.post(url, data=data, headers=headers)
+        requests.post(url, data=json.dumps(data), headers=headers)
         self.console.print("Data sent to server! :smiley:")
         
         # Save data to a json file
