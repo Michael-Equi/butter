@@ -1,0 +1,11 @@
+{
+  "name": "butter",
+  "version": "1.0.0",
+  "repository": "git@github.com:Michael-Equi/butter.git",
+  "author": "skrider <skrider@berkeley.edu>",
+  "license": "MIT",
+  "packageManager": "yarn@3.3.1",
+  "workspaces": [
+    "packages/*"
+  ]
+}

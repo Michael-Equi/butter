@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import UpgradeButton from "../../../client/components/UpgradeButton";
 import { useGetProjectQuery } from "../../../client/graphql/getProject.generated";
@@ -16,14 +17,68 @@ import {
   Tr,
   Td,
   Code,
-  Text,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  SimpleGrid,
 } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import { BadgeIndicator } from "../../../client/components/Atoms/BadgeIndicator";
 import { CopyBox } from "../../../client/components/Atoms/CopyBox";
+import { Line } from "react-chartjs-2";
+import { theme } from "../../../client/theme";
+import { CardBackground } from "../../../client/components/Atoms/CardBackground";
 
 dayjs.extend(LocalizedFormat);
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const lineOptions = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top" as const,
+    },
+    title: {
+      display: false,
+      text: "",
+    },
+  },
+};
+
+function extractAndNormalize(object: any, key: string): number[] {
+  const data = object.map((item: any) => item[key]);
+  if (!data) return [];
+  const min = Math.min(...data);
+  const max = Math.max(...data);
+  const range = max - min;
+  const normalized = (data as number[]).map((value) => {
+    return (value - min) / range;
+  });
+  console.log(normalized);
+  return normalized;
+}
 
 function Project() {
   const router = useRouter();
@@ -34,6 +89,8 @@ function Project() {
     },
   });
 
+  const [branch, setBranch] = useState("all");
+
   if (fetching) return <p>Loading...</p>;
 
   if (error) return <p>{error.message}</p>;
@@ -42,24 +99,89 @@ function Project() {
 
   const { project } = data;
 
+  const allTestRuns = (() => {
+    return project?.testRuns?.edges
+      ?.map((edge) => {
+        const testRun = edge?.node;
+        if (!testRun) return null;
+        return testRun;
+      })
+      .filter((testRun) => Boolean(testRun));
+  })();
+
+  const branches = allTestRuns
+    .map((testRun) => testRun?.branch)
+    .filter(
+      (branch, index, self) => self.indexOf(branch) === index
+    ) as string[];
+
+  const testRuns = allTestRuns.filter((testRun) => {
+    return testRun?.branch === branch || branch === "all";
+  });
+
+  const chartData = (() => {
+    const labels = Array.from(testRuns.keys()).map((x) => `${x + 1}`);
+    const datasets = [
+      {
+        label: "Average Test Sentiment",
+        data: extractAndNormalize(testRuns, "averageTestSentiment"),
+        borderColor: theme.colors.blue[300],
+      },
+      {
+        label: "Average Semantic Similarity",
+        data: extractAndNormalize(testRuns, "averageSemanticSimilarity"),
+        borderColor: theme.colors.green[300],
+      },
+      {
+        label: "Average Expected Sentiment",
+        data: extractAndNormalize(testRuns, "averageExpectedSentiment"),
+        borderColor: theme.colors.orange[300],
+      },
+      {
+        label: "Average Jaccard Similarity",
+        data: extractAndNormalize(testRuns, "averageJaccardSimilarity"),
+        borderColor: theme.colors.red[300],
+      },
+    ];
+    return {
+      labels,
+      datasets,
+    };
+  })();
+
   return (
     <Layout>
       <Flex alignItems="center">
         <Heading size="sm">{project.name}</Heading>
-        <Flex ml={4} fontWeight="semibold" color="muted">
-          ID:
-          {project.id && (
-            <CopyBox ml={2} value={project.id}>
-              <Code>{project?.id}</Code>
-            </CopyBox>
-          )}
-        </Flex>
+        <Box ml={4}>
+          <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              {branch == "all" ? "Filter by branch" : branch}
+            </MenuButton>
+            <MenuList>
+              <MenuItem onClick={() => setBranch("all")}>All</MenuItem>
+              {branches.map((b) => (
+                <MenuItem onClick={() => setBranch(b as string)}>
+                  <Code>{b}</Code>
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
+        </Box>
         <Spacer />
         {!project.paidPlan && <UpgradeButton mr={4} projectId={project.id} />}
         <Link href={`/app/${project.slug}/settings`}>
           <Button>Settings</Button>
         </Link>
       </Flex>
+      <SimpleGrid columns={2} mt={8}>
+        <CardBackground>
+          <Heading size="xs" mb={4}>
+            Model Performance
+          </Heading>
+          <Line options={lineOptions} data={chartData} />
+        </CardBackground>
+      </SimpleGrid>
       <Box p={4} bg="bg-surface" mt={8} borderRadius="lg" boxShadow="sm">
         <Table>
           <Thead>
@@ -73,9 +195,8 @@ function Project() {
             </Tr>
           </Thead>
           <Tbody>
-            {project?.testRuns?.edges?.map((edge) => {
-              const testRun = edge?.node;
-              if (!testRun) return null;
+            {testRuns.map((testRun) => {
+              if (testRun == null) return null;
               return (
                 <Link
                   href={`/app/${project.slug}/run/${testRun.id}`}
