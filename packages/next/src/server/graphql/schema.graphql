@@ -82,14 +82,14 @@ type TestRun {
   averageTestSentiment: Float
   branch: String!
   commitId: String!
-  configFile: String!
+  configFile: String
   createdAt: Float!
   id: String!
   name: String!
   project: Project!
   tags: String
   tests(after: String, before: String, first: Int, last: Int): TestRunTestsConnection!
-  testsFile: String!
+  testsFile: String
 }
 
 type TestRunTestsConnection {
