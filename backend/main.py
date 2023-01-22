@@ -159,13 +159,16 @@ def _get_sentiment(input):
     response = requests.post(API_URL, headers=headers, json=payload)
     positive, negative = 0, 0
 
-    for score_obj in response.json()[0]:
-        print(score_obj)
-        if score_obj['label'] == 'positive':
-            positive = score_obj['score']
-        elif score_obj['label'] == 'negative':
-            negative = score_obj['score']
-    return positive - negative
+    try:    
+        for score_obj in response.json()[0]:
+            print(score_obj)
+            if score_obj['label'] == 'positive':
+                positive = score_obj['score']
+            elif score_obj['label'] == 'negative':
+                negative = score_obj['score']
+        return positive - negative
+    except:
+        return 0
 
 def _jaccard_similarity(string1, string2):
     """
