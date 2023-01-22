@@ -42,9 +42,9 @@ class Butter:
                     output, meta = test(prompt["input"])
 
                 cases.append({
-                    "input": prompt["input"],
-                    "output": output,
-                    "answer": prompt["answer"],
+                    "inputs": prompt["input"],
+                    "outputs": output,
+                    "expected": prompt["answer"],
                     "meta": meta,
                     "args": args
                 })
