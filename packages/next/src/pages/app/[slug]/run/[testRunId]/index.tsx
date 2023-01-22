@@ -133,10 +133,18 @@ const testRunIdPage: NextPage = () => {
                   <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
                     <Td>{test.title}</Td>
                     <Td>{test.description}</Td>
-                    <Td>{test.averageSemanticSimilarity}</Td>
-                    <Td>{test.averageJaccardSimilarity}</Td>
-                    <Td>{test.averageExpectedSentiment}</Td>
-                    <Td>{test.averageTestSentiment}</Td>
+                    <Td>
+                      <BadgeIndicator value={test.semanticSimilarity} />
+                    </Td>
+                    <Td>
+                      <BadgeIndicator value={test.jaccardSimilarity} />
+                    </Td>
+                    <Td>
+                      <BadgeIndicator value={test.expectedSentiment} />
+                    </Td>
+                    <Td>
+                      <BadgeIndicator value={test.testSentiment} />
+                    </Td>
                   </Tr>
                 </Link>
               );

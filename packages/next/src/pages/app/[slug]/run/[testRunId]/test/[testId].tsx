@@ -88,7 +88,7 @@ const Test: NextPage = () => {
 
       <SimpleGrid columns={{ base: 1, md: 4 }} gap={5} mt={5}>
         <Stat
-          value={test.averageSemanticSimilarity ?? "N/A"}
+          value={test.semanticSimilarity ?? "N/A"}
           label="Average Semantic Similarity"
           delta={{
             value: "12%",
@@ -96,15 +96,12 @@ const Test: NextPage = () => {
           }}
         />
         <Stat
-          value={test.averageJaccardSimilarity ?? "N/A"}
+          value={test.jaccardSimilarity ?? "N/A"}
           label="Average Jaccard Similarity"
         />
+        <Stat value={test.testSentiment ?? "N/A"} label="Test Sentiment" />
         <Stat
-          value={test.averageTestSentiment ?? "N/A"}
-          label="Test Sentiment"
-        />
-        <Stat
-          value={test.averageExpectedSentiment ?? "N/A"}
+          value={test.expectedSentiment ?? "N/A"}
           label="Expected Sentiment"
         />
       </SimpleGrid>
@@ -132,9 +129,9 @@ const Test: NextPage = () => {
           <Tbody>
             {test?.cases?.map((testCase) => (
               <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
-                <Td>{testCase.inputs[0]}</Td>
-                <Td>{testCase.outputs[0]}</Td>
-                <Td>{testCase.expected[0]}</Td>
+                <Td>{testCase.inputs[testCase.inputs.length - 1]}</Td>
+                <Td>{testCase.outputs[testCase.outputs.length - 1]}</Td>
+                <Td>{testCase.expected}</Td>
                 <Td>
                   <BadgeIndicator
                     value={testCase.jaccardSimilarity ?? undefined}

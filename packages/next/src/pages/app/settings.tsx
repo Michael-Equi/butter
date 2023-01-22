@@ -5,7 +5,13 @@ import { useUpdateUserMutation } from "../../client/graphql/updateUser.generated
 import toast from "react-hot-toast";
 import { useGetCurrentUserQuery } from "../../client/graphql/getCurrentUser.generated";
 import Layout from "../../client/components/Containers/Layout";
-import { Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Input,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function Dashboard() {
   const [{ data, fetching, error }] = useGetCurrentUserQuery();
@@ -36,31 +42,39 @@ export default function Dashboard() {
   return (
     <Layout>
       <Heading size="lg">{currentUser.name} Settings</Heading>
-      <input
-        value={name}
-        placeholder="Arnold Schwarzenegger"
-        onChange={(evt) => setName(evt.target.value)}
-      />
-      <button
-        disabled={!name}
-        onClick={() => {
-          if (!name) return;
-          toast.promise(
-            updateUser({
-              name,
-              userId: currentUser.id,
-            }),
-            {
-              loading: `Updating settings...`,
-              success: `Settings updated!`,
-              error: (err) => err,
-            }
-          );
-        }}
+      <Box
+        mt={4}
+        px={{ base: "4", md: "6" }}
+        py={{ base: "5", md: "6" }}
+        bg="bg-surface"
+        borderRadius="lg"
+        boxShadow={useColorModeValue("sm", "sm-dark")}
       >
-        Save
-      </button>
-      <Link href="/app">Back to dashboard</Link>
+        <Input
+          value={name}
+          placeholder="Arnold Schwarzenegger"
+          onChange={(evt) => setName(evt.target.value)}
+        />
+        <Button
+          disabled={!name}
+          onClick={() => {
+            if (!name) return;
+            toast.promise(
+              updateUser({
+                name,
+                userId: currentUser.id,
+              }),
+              {
+                loading: `Updating settings...`,
+                success: `Settings updated!`,
+                error: (err) => err,
+              }
+            );
+          }}
+        >
+          Save
+        </Button>
+      </Box>
     </Layout>
   );
 }

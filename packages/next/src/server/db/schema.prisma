@@ -85,10 +85,10 @@ model Test {
   description String
   cases TestResult[]
 
-  averageSemanticSimilarity Float?
-  averageJaccardSimilarity Float?
-  averageExpectedSentiment Float? // -1 to 1
-  averageTestSentiment Float? // -1 to 1
+  semanticSimilarity Float?
+  jaccardSimilarity Float?
+  expectedSentiment Float? // -1 to 1
+  testSentiment Float? // -1 to 1
 
   testRunId String @db.ObjectId
   testRun TestRun @relation(fields: [testRunId], references: [id])
