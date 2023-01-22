@@ -174,7 +174,7 @@ function Project() {
           <Button>Settings</Button>
         </Link>
       </Flex>
-      <SimpleGrid columns={2} mt={8}>
+      <SimpleGrid columns={1} mt={8}>
         <CardBackground>
           <Heading size="xs" mb={4}>
             Model Performance
