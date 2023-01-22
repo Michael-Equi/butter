@@ -1487,6 +1487,7 @@ __metadata:
     "@graphql-codegen/typescript-urql": ^3.6.4
     "@graphql-codegen/typescript-urql-graphcache": ^2.3.3
     "@graphql-yoga/node": ^2.13.12
+    "@hookform/resolvers": ^2.9.10
     "@netlify/plugin-nextjs": ^4.14.1
     "@pothos/core": ^3.19.1
     "@pothos/plugin-prisma": ^3.31.1
@@ -1511,6 +1512,7 @@ __metadata:
     cookie-session: ^2.0.0
     cross-env: ^7.0.3
     cypress: ^10.7.0
+    dayjs: ^1.11.7
     dotenv: ^16.0.1
     eslint: ^8.21.0
     eslint-config-prettier: ^8.5.0
@@ -1534,12 +1536,15 @@ __metadata:
     raw-body: ^2.5.1
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-hook-form: ^7.42.1
     react-hot-toast: ^2.3.0
+    react-icons: ^4.7.1
     slug: ^5.3.0
     stripe: ^10.1.0
     ts-node: ^10.9.1
     typescript: ^4.7.4
     urql: ^2.2.3
+    zod: ^3.20.2
   languageName: unknown
   linkType: soft
 
@@ -3743,6 +3748,15 @@ __metadata:
     "@repeaterjs/repeater": ^3.0.4
     tslib: ^2.3.1
   checksum: 597a188d4a9d307eb5eb6b866e4d570166b8444d1ab3ca4cd0691afe92f782b25cdb3ba148512c8975ed119bd69226498f668b50eb2e1f24776cf78121a820a9
+  languageName: node
+  linkType: hard
+
+"@hookform/resolvers@npm:^2.9.10":
+  version: 2.9.10
+  resolution: "@hookform/resolvers@npm:2.9.10"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: ae3395372d6ff11506a72bb6b3c57046bd14b457c2fe1f0485f60cf2dba0ef4484e3a2fb5a0f6a217f6d701393ebc3683a2ede7c81c6f13e71f965f520c7af16
   languageName: node
   linkType: hard
 
@@ -7080,7 +7094,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.10.4":
+"dayjs@npm:^1.10.4, dayjs@npm:^1.11.7":
   version: 1.11.7
   resolution: "dayjs@npm:1.11.7"
   checksum: 5003a7c1dd9ed51385beb658231c3548700b82d3548c0cfbe549d85f2d08e90e972510282b7506941452c58d32136d6362f009c77ca55381a09c704e9f177ebb
@@ -11919,6 +11933,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.42.1":
+  version: 7.42.1
+  resolution: "react-hook-form@npm:7.42.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: f0dcf5d7f6f90b4ba5efe58ce14b7adda6f2327c80c444df259c31d8bc785e823c9ec77c27a4f1db5bef70992235ae420acd190b1c767bec2c7fb8d11d639880
+  languageName: node
+  linkType: hard
+
 "react-hot-toast@npm:^2.3.0":
   version: 2.4.0
   resolution: "react-hot-toast@npm:2.4.0"
@@ -11928,6 +11951,15 @@ __metadata:
     react: ">=16"
     react-dom: ">=16"
   checksum: 910214496d6821af8e643c5f7087eff6c76f1395756f3d6cf1fc07a599c582c443cbb5a4cadfc58205acf0845b77a2a10a4ca49b385e772b72edc57dfd38d016
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "react-icons@npm:4.7.1"
+  peerDependencies:
+    react: "*"
+  checksum: ed3cbdc5fc0c4d7d2debf78fdc8c4c80aeacf85a506a9a3c11b1d5922de393ac0a6542012b7fb81761e9280c54d0f26827d50a92b54ec8f0c8e52364d89970b5
   languageName: node
   linkType: hard
 
@@ -13988,5 +14020,12 @@ __metadata:
   version: 0.1.0
   resolution: "yocto-queue@npm:0.1.0"
   checksum: f77b3d8d00310def622123df93d4ee654fc6a0096182af8bd60679ddcdfb3474c56c6c7190817c84a2785648cdee9d721c0154eb45698c62176c322fb46fc700
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.20.2":
+  version: 3.20.2
+  resolution: "zod@npm:3.20.2"
+  checksum: 04172f7e9350372684ccd298d4716908edc9113751295b6c4e1b3ea84e2af8997e504b33ba36f4741417bb2a5dc90bfd40501f6b0e7389df10e42a63d6d8366c
   languageName: node
   linkType: hard
