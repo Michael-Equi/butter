@@ -82,7 +82,7 @@ class Butter:
             }
         headers = {'Content-type': 'application/json'}
         requests.post(url, data=data, headers=headers)
-        self.console.print(":fire::fire::fire: Data sent to server! :smiley:")
+        self.console.print("Data sent to server! :smiley:")
         
         # Save data to a json file
         if debug:
