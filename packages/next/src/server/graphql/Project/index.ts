@@ -44,6 +44,11 @@ export const Project = builder.prismaObject("Project", {
     }),
     testRuns: t.relatedConnection("testRuns", {
       cursor: "id",
+      query: (args, context) => ({
+        orderBy: {
+          createdAt: "desc",
+        },
+      }),
     }),
   }),
 });

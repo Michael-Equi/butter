@@ -38,11 +38,10 @@ export const Stat = ({ label, value, delta, ...boxProps }: Props) => (
         <Text fontSize="sm" color="muted">
           {label}
         </Text>
-        <Icon as={FiMoreVertical} boxSize="5" color="muted" />
       </HStack>
       <HStack justify="space-between">
         <Heading size={useBreakpointValue({ base: "sm", md: "md" })}>
-          {Math.round(value * 100) / 100}
+          {typeof value === "number" ? Math.round(value * 100) / 100 : "N/A"}
         </Heading>
         {delta && (
           <Badge

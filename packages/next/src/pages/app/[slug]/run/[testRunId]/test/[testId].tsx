@@ -129,8 +129,8 @@ const Test: NextPage = () => {
           <Tbody>
             {test?.cases?.map((testCase) => (
               <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
-                <Td>{testCase.inputs[0]}</Td>
-                <Td>{testCase.outputs[0]}</Td>
+                <Td>{testCase.inputs[testCase.inputs.length - 1]}</Td>
+                <Td>{testCase.outputs[testCase.outputs.length - 1]}</Td>
                 <Td>{testCase.expected}</Td>
                 <Td>
                   <BadgeIndicator

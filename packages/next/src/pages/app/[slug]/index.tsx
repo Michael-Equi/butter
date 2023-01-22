@@ -16,10 +16,12 @@ import {
   Tr,
   Td,
   Code,
+  Text,
 } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import { BadgeIndicator } from "../../../client/components/Atoms/BadgeIndicator";
+import { CopyBox } from "../../../client/components/Atoms/CopyBox";
 
 dayjs.extend(LocalizedFormat);
 
@@ -44,6 +46,14 @@ function Project() {
     <Layout>
       <Flex alignItems="center">
         <Heading size="sm">{project.name}</Heading>
+        <Flex ml={4} fontWeight="semibold" color="muted">
+          ID:
+          {project.id && (
+            <CopyBox ml={2} value={project.id}>
+              <Code>{project?.id}</Code>
+            </CopyBox>
+          )}
+        </Flex>
         <Spacer />
         {!project.paidPlan && <UpgradeButton mr={4} projectId={project.id} />}
         <Link href={`/app/${project.slug}/settings`}>
@@ -54,9 +64,9 @@ function Project() {
         <Table>
           <Thead>
             <Tr>
+              <Th>Name</Th>
               <Th>Branch</Th>
               <Th>Commit</Th>
-              <Th>Name</Th>
               <Th>Ran At</Th>
               <Th>Avg. Semantic Similarity</Th>
               <Th>Avg. Jaccard Similarity</Th>
@@ -72,13 +82,14 @@ function Project() {
                   key={testRun.id}
                 >
                   <Tr _hover={{ bg: "bg-muted" }} cursor="pointer">
+                    <Td>{testRun.name}</Td>
+
                     <Td>
                       <Code>{testRun.branch}</Code>
                     </Td>
                     <Td>
                       <Code>{testRun.commitId}</Code>
                     </Td>
-                    <Td>{testRun.name}</Td>
                     <Td>{dayjs(testRun.createdAt).format("LLL")}</Td>
                     <Td>
                       <BadgeIndicator
