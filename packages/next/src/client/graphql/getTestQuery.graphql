@@ -12,8 +12,8 @@ query GetTest($id: String) {
             jaccardSimilarity
             semanticSimilarity
             testSentiment
-            input
-            output
+            inputs
+            outputs
             expected
         }
     }

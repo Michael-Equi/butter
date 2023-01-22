@@ -68,9 +68,9 @@ type Test {
 type TestResult {
   expected: [String!]!
   expectedSentiment: Float
-  input: [String!]!
+  inputs: [String!]!
   jaccardSimilarity: Float
-  output: [String!]!
+  outputs: [String!]!
   semanticSimilarity: Float
   testSentiment: Float
 }

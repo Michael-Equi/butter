@@ -58,8 +58,8 @@ function Project() {
               <Th>Branch</Th>
               <Th>Name</Th>
               <Th>Ran At</Th>
-              <Th>Avg Similarity</Th>
-              <Th>Jaccard Similarity</Th>
+              <Th>Avg. Semantic Similarity</Th>
+              <Th>Avg. Jaccard Similarity</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -82,12 +82,12 @@ function Project() {
                     <Td>{dayjs(testRun.createdAt).format("LLL")}</Td>
                     <Td>
                       <BadgeIndicator
-                        value={testRun.averageSimilarity ?? undefined}
+                        value={testRun.averageTestSentiment ?? undefined}
                       />
                     </Td>
                     <Td>
                       <BadgeIndicator
-                        value={testRun.jaccardSimilarity ?? undefined}
+                        value={testRun.averageJaccardSimilarity ?? undefined}
                       />
                     </Td>
                   </Tr>

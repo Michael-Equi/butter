@@ -11,7 +11,7 @@ export const BadgeIndicator: FC<BadgeIndicatorProps> = ({ value, ...props }) =>
       colorScheme={value < 0.3 ? "red" : value < 0.7 ? "orange" : "green"}
       {...props}
     >
-      {value}
+      {Math.round(value * 100) / 100}
     </Badge>
   ) : (
     <Badge colorScheme="gray">N/A</Badge>

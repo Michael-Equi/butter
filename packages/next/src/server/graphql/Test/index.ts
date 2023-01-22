@@ -3,8 +3,8 @@ import prisma from "../../db/prisma";
 
 export const TestResult = builder.simpleObject("TestResult", {
   fields: (t) => ({
-    input: t.stringList(),
-    output: t.stringList(),
+    inputs: t.stringList(),
+    outputs: t.stringList(),
     expected: t.stringList(),
     semanticSimilarity: t.float({ nullable: true }),
     jaccardSimilarity: t.float({ nullable: true }),
