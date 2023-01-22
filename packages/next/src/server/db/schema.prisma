@@ -50,8 +50,8 @@ model TestRun {
   name       String
   commitId  String
   branch    String
-  configFile String
-  testsFile String
+  configFile String?
+  testsFile String?
   tags String?
   averageSemanticSimilarity Float?
   averageJaccardSimilarity Float?

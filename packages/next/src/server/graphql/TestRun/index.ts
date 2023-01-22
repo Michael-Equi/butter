@@ -5,8 +5,8 @@ export const TestRun = builder.prismaObject("TestRun", {
   fields: (t) => ({
     id: t.exposeString("id", { nullable: false }),
     name: t.exposeString("name"),
-    configFile: t.exposeString("configFile"),
-    testsFile: t.exposeString("testsFile"),
+    configFile: t.exposeString("configFile", { nullable: false }),
+    testsFile: t.exposeString("testsFile", { nullable: false }),
     tags: t.exposeString("tags", { nullable: true }),
     createdAt: t.exposeFloat("createdAt" as never),
     commitId: t.exposeString("commitId"),
