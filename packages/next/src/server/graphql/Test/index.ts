@@ -18,16 +18,16 @@ export const Test = builder.prismaObject("Test", {
     id: t.exposeString("id", { nullable: false }),
     title: t.exposeString("title"),
     description: t.exposeString("description"),
-    averageSemanticSimilarity: t.exposeFloat("averageSemanticSimilarity", {
+    semanticSimilarity: t.exposeFloat("semanticSimilarity", {
       nullable: true,
     }),
-    averageJaccardSimilarity: t.exposeFloat("averageJaccardSimilarity", {
+    jaccardSimilarity: t.exposeFloat("jaccardSimilarity", {
       nullable: true,
     }),
-    averageExpectedSentiment: t.exposeFloat("averageExpectedSentiment", {
+    expectedSentiment: t.exposeFloat("expectedSentiment", {
       nullable: true,
     }),
-    averageTestSentiment: t.exposeFloat("averageTestSentiment", {
+    testSentiment: t.exposeFloat("testSentiment", {
       nullable: true,
     }),
     cases: t.field({ type: [TestResult], resolve: (test) => test.cases }),

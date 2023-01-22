@@ -17,10 +17,10 @@ query GetTestRun($id: String) {
                     id
                     title
                     description
-                    averageSemanticSimilarity 
-                    averageJaccardSimilarity 
-                    averageExpectedSentiment
-                    averageTestSentiment
+                    semanticSimilarity
+                    jaccardSimilarity
+                    expectedSentiment
+                    testSentiment
                     cases {
                         inputs
                         outputs

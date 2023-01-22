@@ -54,8 +54,8 @@ function Project() {
         <Table>
           <Thead>
             <Tr>
-              <Th>Commit</Th>
               <Th>Branch</Th>
+              <Th>Commit</Th>
               <Th>Name</Th>
               <Th>Ran At</Th>
               <Th>Avg. Semantic Similarity</Th>

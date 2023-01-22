@@ -42,7 +42,7 @@ export const Stat = ({ label, value, delta, ...boxProps }: Props) => (
       </HStack>
       <HStack justify="space-between">
         <Heading size={useBreakpointValue({ base: "sm", md: "md" })}>
-          {value}
+          {Math.round(value * 100) / 100}
         </Heading>
         {delta && (
           <Badge

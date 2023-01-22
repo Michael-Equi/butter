@@ -1,10 +1,10 @@
 query GetTest($id: String) {
     test(id: $id) {
         id
-        averageExpectedSentiment
-        averageJaccardSimilarity
-        averageSemanticSimilarity
-        averageTestSentiment
+        expectedSentiment
+        jaccardSimilarity
+        semanticSimilarity
+        testSentiment
         title
         description
         cases {

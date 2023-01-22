@@ -55,18 +55,18 @@ type Query {
 }
 
 type Test {
-  averageExpectedSentiment: Float
-  averageJaccardSimilarity: Float
-  averageSemanticSimilarity: Float
-  averageTestSentiment: Float
   cases: [TestResult!]!
   description: String!
+  expectedSentiment: Float
   id: String!
+  jaccardSimilarity: Float
+  semanticSimilarity: Float
+  testSentiment: Float
   title: String!
 }
 
 type TestResult {
-  expected: [String!]!
+  expected: String!
   expectedSentiment: Float
   inputs: [String!]!
   jaccardSimilarity: Float
