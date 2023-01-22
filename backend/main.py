@@ -65,10 +65,22 @@ def run_analytics_handler():
             # Calculating the similarity between the expected output and the test output
             #for i in range(len(expected)):
             #try:
-            semantic_similarities.append(_get_similarity(outputs[-1], expected)) # TODO: (michael-lutz) add protection against API failure
-            jaccard_similarities.append(_jaccard_similarity(outputs[-1], expected))
-            expected_sentiments.append(_get_sentiment(expected))
-            test_sentiments.append(_get_sentiment(outputs[-1]))
+            try:
+                semantic_similarities.append(_get_similarity(outputs[-1], expected)) # TODO: (michael-lutz) add protection against API failure
+            except:
+                semantic_similarities.append(.5)
+            try:
+                jaccard_similarities.append(_jaccard_similarity(outputs[-1], expected))
+            except:
+                jaccard_similarities.append(.5)
+            try:
+                expected_sentiments.append(_get_sentiment(expected))
+            except:
+                expected_sentiments.append(0)
+            try:
+                test_sentiments.append(_get_sentiment(outputs[-1]))
+            except:
+                test_sentiments.append(0)
             #except Exception as e:
             #    print('An error occurred:', e)
             # Average similarity
