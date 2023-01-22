@@ -6,6 +6,8 @@ import builder from "./builder";
 // Import your types here
 import "./User";
 import "./Project";
+import "./TestRun";
+import "./Test";
 
 export const schema = builder.toSchema({});
 

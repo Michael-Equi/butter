@@ -24,7 +24,7 @@ model User {
 model Project {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt  DateTime @default(now())
-  modifiedAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
   name       String
   slug       String   @unique
 
@@ -35,4 +35,52 @@ model Project {
   stripeSubscriptionId   String?   @unique
   stripePriceId          String?
   stripeCurrentPeriodEnd DateTime?
+  testRuns TestRun[]
+}
+
+enum SentimentDifference {
+  Plus
+  Minus
+}
+
+model TestRun {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt  DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  name       String
+  commitId  String
+  branch    String
+  configFile String
+  testsFile String
+  tags String?
+  averageSimilarity Float?
+  jaccardSimilarity Float?
+  sentimentExpected Float? // -1 to 1
+  sentimentReturned Float? // -1 to 1
+
+  projectId   String   @db.ObjectId
+  project     Project  @relation(fields: [projectId], references: [id])
+
+  tests      Test[]
+}
+
+type TestResult {
+  input String[]
+  output String[]
+  data Json?
+  semanticSimilarity Float
+}
+
+model Test {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt  DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  title String
+  description String
+  topFiveWords String[] @default([])
+  results TestResult[]
+
+  testRunId String @db.ObjectId
+  testRun TestRun @relation(fields: [testRunId], references: [id])
 }

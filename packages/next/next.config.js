@@ -2,16 +2,28 @@
 const withPrismaPlugin = require("next-prisma-plugin-webpack5");
 
 /** @type {import('next').NextConfig} */
-module.exports = withPrismaPlugin({
-  webpack: (config) => {
-    if (process.env.IS_DOCKER) {
-      // "next dev" in Docker doesn't reliably pick up file changes, so we need to enable polling
-      // see https://github.com/vercel/next.js/issues/6417 and https://webpack.js.org/configuration/watch/
-      config.watchOptions = {
-        ...config.watchOptions,
-        poll: 500,
-      };
-    }
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: "./tsconfig.json",
+  },
+  compiler: {
+    styledComponents: true,
+  },
+  experimental: {
+    externalDir: true,
+  },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
+    });
+
     return config;
   },
-});
+};
+
+module.exports = withPrismaPlugin(nextConfig);
