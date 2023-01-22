@@ -1,33 +1,34 @@
 import typer
-import json
 from butter.butter import Butter
 from pathlib import Path
-import logging
+import os
+# import logging
 
 app = typer.Typer()
 
 
 @app.command()
-def run(path: str="./", description: str=''):
+def run(path: str="./", description: str='', debug: bool=False):
 
-    #TODO handle logging
-    logging.basicConfig(filename='./example.log', encoding='utf-8', level=logging.DEBUG)
+    # logging.basicConfig(filename='./example.log', encoding='utf-8', level=logging.DEBUG)
 
-    # TODO Collect commit information
+    # Path should be global after running these two lines
+    if not os.path.isabs(path):
+        path = os.path.abspath(path)
 
     path = Path(path)
-    butter_tester = Butter(path)
+    butter_tester = Butter(path, description)
 
     with open(path / 'tests.py', 'r') as f:
         text = f.read()
-        exec(text)
+        exec(text, globals(), globals())
 
     # List tests in path
-    butter_tester.run_tests()
+    butter_tester.run_tests(debug=debug)
 
-@app.command()
-def delete():
-    print("Deleting user: Hiro Hamada")
+# @app.command()
+# def delete():
+#     print("Deleting user: Hiro Hamada")
 
 
 if __name__ == "__main__":

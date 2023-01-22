@@ -13,10 +13,11 @@ def test(json_file: str, desc: str=""):
 class Butter:
     tests = []
 
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: str, description: str) -> None:
         self.path = Path(path)
+        self.description = description
 
-    def run_tests(self):
+    def run_tests(self, debug=False):
         tests = []
         json_files = set()
         for test, json_file, desc in Butter.tests:
@@ -72,11 +73,13 @@ class Butter:
             "path": str(self.path),
             "commit": repo.head.object.hexsha,
             "branch": repo.active_branch.name,
+            "description": self.description
             }
         headers = {'Content-type': 'application/json'}
         requests.post(url, data=data, headers=headers)
         
         # Save data to a json file
-        with open(self.path / "data_dump.json", 'w+') as f:
-            json.dump(data, f)
+        if debug:
+            with open(self.path / "data_dump.json", 'w+') as f:
+                json.dump(data, f)
     
