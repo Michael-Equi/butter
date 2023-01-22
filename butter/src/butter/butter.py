@@ -46,6 +46,9 @@ class Butter:
                 else:
                     output, meta = test(prompt["input"])
 
+                if type(output) != list:
+                    raise Exception(f"Output of {test.__name__} is not a list")
+
                 cases.append({
                     "inputs": prompt["input"],
                     "outputs": output,
