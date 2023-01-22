@@ -2,7 +2,8 @@ from pathlib import Path
 import time
 import json
 import requests
-from tqdm import tqdm
+from rich.progress import track
+from rich.console import Console
 import git
 
 def test(json_file: str, desc: str=""):
@@ -13,16 +14,19 @@ def test(json_file: str, desc: str=""):
 class Butter:
     tests = []
 
-    def __init__(self, path: str, description: str) -> None:
+    def __init__(self, path: str, id, description: str) -> None:
         self.path = Path(path)
+        self.id = id
         self.description = description
+        self.console = Console()
 
     def run_tests(self, debug=False):
+        self.console.print(f":sunglasses: Running tests...\n")
+
         tests = []
         json_files = set()
         for test, json_file, desc in Butter.tests:
-            print(f"#################### Running test {test.__name__} ####################")
-            
+
             # Read the json file with the prompts / expected outputs
             json_files.add(json_file)
             with open(self.path / json_file, 'r') as f:
@@ -32,7 +36,7 @@ class Butter:
 
             # Each test input is a list of strings
             cases = []
-            for prompt in tqdm(test_json["tests"]):
+            for prompt in track(test_json["tests"], description=f"Processing {test.__name__}..."):
                 
                 # Output is a list of strings, meta is a generic json object
                 args = None
@@ -60,7 +64,7 @@ class Butter:
                 })
 
             # print(f"Input: {prompt['question']}, Output: {output}, Meta: {meta}")
-            print(f"#################### Completed {test.__name__} in {round(end - start, 2)}s ####################")
+            self.console.print(f":star:Completed {test.__name__} in {round(end - start, 2)}s\n")
 
 
         # TODO Attach commit id and branch name
@@ -69,14 +73,16 @@ class Butter:
         # Create a post request
         url = "https://www.example.com"
         data = {
+            "projectId": self.id,
             "tests": tests,
             "path": str(self.path),
-            "commit": repo.head.object.hexsha,
+            "commitId": repo.head.object.hexsha,
             "branch": repo.active_branch.name,
             "description": self.description
             }
         headers = {'Content-type': 'application/json'}
         requests.post(url, data=data, headers=headers)
+        self.console.print(":fire::fire::fire: Data sent to server! :smiley:")
         
         # Save data to a json file
         if debug:

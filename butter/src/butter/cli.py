@@ -11,13 +11,16 @@ app = typer.Typer()
 def run(path: str="./", description: str='', debug: bool=False):
 
     # logging.basicConfig(filename='./example.log', encoding='utf-8', level=logging.DEBUG)
+    id = os.getenv('BUTTER_ID', None)
+    if id is None:
+        raise Exception("BUTTER_ID not set")
 
     # Path should be global after running these two lines
     if not os.path.isabs(path):
         path = os.path.abspath(path)
 
     path = Path(path)
-    butter_tester = Butter(path, description)
+    butter_tester = Butter(path, id, description)
 
     with open(path / 'tests.py', 'r') as f:
         text = f.read()
