@@ -17,11 +17,11 @@ import {
   Tr,
   Td,
   Code,
-  Text,
   Menu,
   MenuButton,
   MenuList,
-  MenuItem
+  MenuItem,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
@@ -37,14 +37,10 @@ import {
 import dayjs from "dayjs";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import { BadgeIndicator } from "../../../client/components/Atoms/BadgeIndicator";
-<<<<<<< HEAD
 import { CopyBox } from "../../../client/components/Atoms/CopyBox";
-import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
-=======
 import { Line } from "react-chartjs-2";
 import { theme } from "../../../client/theme";
->>>>>>> e58711e (add graphg)
+import { CardBackground } from "../../../client/components/Atoms/CardBackground";
 
 dayjs.extend(LocalizedFormat);
 
@@ -114,8 +110,10 @@ function Project() {
   })();
 
   const branches = allTestRuns
-    .map((testRun) => testRun.branch)
-    .filter((branch, index, self) => self.indexOf(branch) === index);
+    .map((testRun) => testRun?.branch)
+    .filter(
+      (branch, index, self) => self.indexOf(branch) === index
+    ) as string[];
 
   const testRuns = allTestRuns.filter((testRun) => {
     return testRun?.branch === branch || branch === "all";
@@ -127,22 +125,22 @@ function Project() {
       {
         label: "Average Test Sentiment",
         data: extractAndNormalize(testRuns, "averageTestSentiment"),
-        borderColor: theme.colors.blue[500],
+        borderColor: theme.colors.blue[300],
       },
       {
         label: "Average Semantic Similarity",
         data: extractAndNormalize(testRuns, "averageSemanticSimilarity"),
-        borderColor: theme.colors.green[500],
+        borderColor: theme.colors.green[300],
       },
       {
         label: "Average Expected Sentiment",
         data: extractAndNormalize(testRuns, "averageExpectedSentiment"),
-        borderColor: theme.colors.orange[500],
+        borderColor: theme.colors.orange[300],
       },
       {
         label: "Average Jaccard Similarity",
         data: extractAndNormalize(testRuns, "averageJaccardSimilarity"),
-        borderColor: theme.colors.red[500],
+        borderColor: theme.colors.red[300],
       },
     ];
     return {
@@ -155,36 +153,35 @@ function Project() {
     <Layout>
       <Flex alignItems="center">
         <Heading size="sm">{project.name}</Heading>
-        <Flex ml={4} fontWeight="semibold" color="muted">
-          ID:
-          {project.id && (
-            <CopyBox ml={2} value={project.id}>
-              <Code>{project?.id}</Code>
-            </CopyBox>
-          )}
-        </Flex>
+        <Box ml={4}>
+          <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              {branch == "all" ? "Filter by branch" : branch}
+            </MenuButton>
+            <MenuList>
+              <MenuItem onClick={() => setBranch("all")}>All</MenuItem>
+              {branches.map((b) => (
+                <MenuItem onClick={() => setBranch(b as string)}>
+                  <Code>{b}</Code>
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
+        </Box>
         <Spacer />
         {!project.paidPlan && <UpgradeButton mr={4} projectId={project.id} />}
         <Link href={`/app/${project.slug}/settings`}>
           <Button>Settings</Button>
         </Link>
       </Flex>
-      <Box padding="12">
-        <Line options={lineOptions} data={chartData} />
-      </Box>
-      <Box>
-        <Menu>
-          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-            {branch == "all" ? "Select branch" : branch}
-          </MenuButton>
-          <MenuList>
-            <MenuItem onClick={() => setBranch("all")}>All</MenuItem>
-            {branches.map((branch) => (
-              <MenuItem onClick={() => setBranch(branch)}>{branch}</MenuItem>
-            ))}
-          </MenuList>
-        </Menu>
-      </Box>
+      <SimpleGrid columns={2} mt={8}>
+        <CardBackground>
+          <Heading size="xs" mb={4}>
+            Model Performance
+          </Heading>
+          <Line options={lineOptions} data={chartData} />
+        </CardBackground>
+      </SimpleGrid>
       <Box p={4} bg="bg-surface" mt={8} borderRadius="lg" boxShadow="sm">
         <Table>
           <Thead>
