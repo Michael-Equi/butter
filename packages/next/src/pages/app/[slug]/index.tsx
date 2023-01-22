@@ -43,7 +43,7 @@ function Project() {
   return (
     <Layout>
       <Flex alignItems="center">
-        <Heading size="lg">{project.name}</Heading>
+        <Heading size="sm">{project.name}</Heading>
         <Spacer />
         {!project.paidPlan && <UpgradeButton mr={4} projectId={project.id} />}
         <Link href={`/app/${project.slug}/settings`}>

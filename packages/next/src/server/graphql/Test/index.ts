@@ -5,7 +5,7 @@ export const TestResult = builder.simpleObject("TestResult", {
   fields: (t) => ({
     inputs: t.stringList(),
     outputs: t.stringList(),
-    expected: t.stringList(),
+    expected: t.string(),
     semanticSimilarity: t.float({ nullable: true }),
     jaccardSimilarity: t.float({ nullable: true }),
     testSentiment: t.float({ nullable: true }),

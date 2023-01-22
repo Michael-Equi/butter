@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useUpdateUserMutation } from "../../client/graphql/updateUser.generated";
 import toast from "react-hot-toast";
 import { useGetCurrentUserQuery } from "../../client/graphql/getCurrentUser.generated";
+import Layout from "../../client/components/Containers/Layout";
+import { Heading } from "@chakra-ui/react";
 
 export default function Dashboard() {
   const [{ data, fetching, error }] = useGetCurrentUserQuery();
@@ -32,8 +34,8 @@ export default function Dashboard() {
   }
 
   return (
-    <>
-      <h1>{currentUser.name} Settings</h1>
+    <Layout>
+      <Heading size="lg">{currentUser.name} Settings</Heading>
       <input
         value={name}
         placeholder="Arnold Schwarzenegger"
@@ -59,6 +61,6 @@ export default function Dashboard() {
         Save
       </button>
       <Link href="/app">Back to dashboard</Link>
-    </>
+    </Layout>
   );
 }

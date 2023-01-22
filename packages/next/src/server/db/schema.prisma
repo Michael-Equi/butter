@@ -68,7 +68,7 @@ model TestRun {
 type TestResult {
   inputs String[]
   outputs String[]
-  expected String[]
+  expected String
   semanticSimilarity Float
   jaccardSimilarity Float
   expectedSentiment Float
