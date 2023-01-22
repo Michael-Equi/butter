@@ -106,10 +106,10 @@ const Test: NextPage = () => {
                 <Td>{testCase.input[0]}</Td>
                 <Td>{testCase.output[0]}</Td>
                 <Td>{testCase.expected[0]}</Td>
+                <Td>{testCase.semanticSimilarity}</Td>
                 <Td>{testCase.expectedSentiment}</Td>
-                <Td>{test.averageJaccardSimilarity}</Td>
-                <Td>{test.averageExpectedSentiment}</Td>
-                <Td>{test.averageTestSentiment}</Td>
+                <Td>{testCase.testSentiment}</Td>
+                <Td>{testCase.jaccardSimilarity}</Td>
               </Tr>
             ))}
           </Tbody>

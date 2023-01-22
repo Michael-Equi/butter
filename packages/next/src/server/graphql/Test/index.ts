@@ -6,10 +6,10 @@ export const TestResult = builder.simpleObject("TestResult", {
     input: t.stringList(),
     output: t.stringList(),
     expected: t.stringList(),
-    semanticSimilarity: t.float(),
-    jaccardSimilarity: t.float(),
-    testSentiment: t.float(),
-    expectedSentiment: t.float(),
+    semanticSimilarity: t.float({ nullable: true }),
+    jaccardSimilarity: t.float({ nullable: true }),
+    testSentiment: t.float({ nullable: true }),
+    expectedSentiment: t.float({ nullable: true }),
   }),
 });
 

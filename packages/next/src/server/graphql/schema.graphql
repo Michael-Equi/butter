@@ -67,12 +67,12 @@ type Test {
 
 type TestResult {
   expected: [String!]!
-  expectedSentiment: Float!
+  expectedSentiment: Float
   input: [String!]!
-  jaccardSimilarity: Float!
+  jaccardSimilarity: Float
   output: [String!]!
-  semanticSimilarity: Float!
-  testSentiment: Float!
+  semanticSimilarity: Float
+  testSentiment: Float
 }
 
 type TestRun {
