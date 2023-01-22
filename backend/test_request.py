@@ -9,7 +9,8 @@ def post_with_json(url, json_file):
     response = requests.post(url, data=json.dumps(data), headers=headers)
     return response
 
-url = "http://localhost:3001/run_analytics"
+#url = "http://localhost:3001/run_analytics"
+url = "https://butter-production.up.railway.app/run_analytics"
 json_file = "test_data_largest.json"
 
 post_with_json(url, json_file)
