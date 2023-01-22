@@ -1,0 +1,16 @@
+{
+    "tests": [
+        {
+            "input": ["Hi, for some reason my pod for running Rstudio is not starting. I've tried several times at this point and still have the same problem."],
+            "answer": "Hi Colin!  Your pod is running out of storage. You need to upgrade the storage by clicking \"pod → settings → increase storage. Let us know if this works for you!\""
+        },
+        {
+            "input": ["Hi, I am having issues with my pod not starting. Any suggestions on how to fix this?"],
+            "answer": ""
+        },
+        {
+            "input": ["Writing the Dockerfile is straightforward, I think I've written all the essential stuff in it. Now I'm working on the third step. Two quick questions:\nWould you recommend writing the script as a separate file in scripts dir and calling it via subprocess, or writing it as a function within wf/__init__.py?\nHow do I read LatchFile objects as strings, line by line?"],
+            "answer": ""
+        }
+    ]
+}

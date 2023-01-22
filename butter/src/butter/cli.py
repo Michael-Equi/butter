@@ -1,6 +1,6 @@
 import typer
 import json
-from butter import Butter
+from butter.butter import Butter
 from pathlib import Path
 import logging
 
@@ -22,11 +22,8 @@ def run(path: str="./", description: str=''):
         text = f.read()
         exec(text)
 
-    with open(path / 'tests.json', 'r') as f:
-        test_json = json.load(f)
-
     # List tests in path
-    butter_tester.run_tests(test_json)
+    butter_tester.run_tests()
 
 @app.command()
 def delete():
