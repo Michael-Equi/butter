@@ -1,10 +1,12 @@
 from pathlib import Path
 import time
+import os
 import json
 import requests
 from rich.progress import track
 from rich.console import Console
 import git
+from datetime import datetime
 
 def test(json_file: str, desc: str=""):
     def dec(func):
@@ -14,13 +16,11 @@ def test(json_file: str, desc: str=""):
 class Butter:
     tests = []
 
-    def __init__(self, path: str, id, description: str) -> None:
-        self.path = Path(path)
-        self.id = id
-        self.description = description
+    def __init__(self) -> None:
         self.console = Console()
+        self.url = "https://butter-production.up.railway.app/run_analytics"
 
-    def run_tests(self, debug=False):
+    def run_tests(self, path: Path, id, description: str, debug=False):
         self.console.print(f":sunglasses: Running tests...\n")
 
         tests = []
@@ -29,7 +29,7 @@ class Butter:
 
             # Read the json file with the prompts / expected outputs
             json_files.add(json_file)
-            with open(self.path / json_file, 'r') as f:
+            with open(path / json_file, 'r') as f:
                 test_json = json.load(f)
 
             start = time.time()
@@ -70,25 +70,35 @@ class Butter:
             self.console.print(f":star:Completed {test.__name__} in {round(end - start, 2)}s\n")
 
 
-        # TODO Attach commit id and branch name
-        repo = git.Repo(self.path, search_parent_directories=True)
+        # TODO: catch error if not in a git repo
+        repo = git.Repo(path, search_parent_directories=True)
 
         # Create a post request
-        url = "https://butter-production.up.railway.app/run_analytics"
         data = {
-            "projectId": self.id,
+            "projectId": id,
             "tests": tests,
-            "path": str(self.path),
+            "path": str(path),
             "commitId": repo.head.object.hexsha,
             "branch": repo.active_branch.name,
-            "description": self.description
+            "description": description
             }
-        headers = {'Content-type': 'application/json'}
-        requests.post(url, data=json.dumps(data), headers=headers)
-        self.console.print("Data sent to server! :smiley:")
-        
-        # Save data to a json file
-        if debug:
-            with open(self.path / "data_dump.json", 'w+') as f:
+
+        response = self.submit_tests(data)
+        if not response.ok or debug:
+            # Cache the data file so use can attempt to resubmit results later
+            date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
+            os.makedirs(path / ".butter", exist_ok=True)
+            file_path = path / f".butter/test_{date}.json"
+            with open(file_path, 'w+') as f:
                 json.dump(data, f)
+                self.console.print(":file_folder: Cached data to", str(file_path))
+
+    def submit_tests(self, data):
+        headers = {'Content-type': 'application/json'}
+        response = requests.post(self.url, data=json.dumps(data), headers=headers)
+        if not response.ok:
+            self.console.print(":sad: Error: ", response.text)
+        else:
+            self.console.print("Data sent to server! :rocket:")
+        return response 
     
