@@ -70,16 +70,22 @@ class Butter:
             self.console.print(f":star:Completed {test.__name__} in {round(end - start, 2)}s\n")
 
 
-        # TODO: catch error if not in a git repo
-        repo = git.Repo(path, search_parent_directories=True)
+        commit_id = None
+        branch_name = None
+        try:
+            repo = git.Repo(path, search_parent_directories=True)
+            commit_id = repo.head.object.hexsha
+            branch_name = repo.active_branch.name
+        except git.exc.InvalidGitRepositoryError:
+            self.console.print(":exclamation: Not in a git repository! Commit id and branch will not be sent to server.")
 
         # Create a post request
         data = {
             "projectId": id,
             "tests": tests,
             "path": str(path),
-            "commitId": repo.head.object.hexsha,
-            "branch": repo.active_branch.name,
+            "commitId": commit_id,
+            "branch": branch_name,
             "description": description
             }
 
