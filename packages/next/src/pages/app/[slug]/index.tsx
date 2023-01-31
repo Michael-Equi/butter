@@ -214,7 +214,7 @@ function Project() {
                     <Td>{dayjs(testRun.createdAt).format("LLL")}</Td>
                     <Td>
                       <BadgeIndicator
-                        value={testRun.averageTestSentiment ?? undefined}
+                        value={testRun.averageSemanticSimilarity ?? undefined}
                       />
                     </Td>
                     <Td>
