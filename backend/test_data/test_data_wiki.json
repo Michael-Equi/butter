@@ -1,0 +1,2150 @@
+{
+    "projectId": "63cc5e18d7bc85b480145932",
+    "tests": [
+        {
+            "title": "test_spellbook",
+            "description": "This is a test on part of the WikiQA dataset.",
+            "jsonFile": "tests_small.json",
+            "cases": [
+                {
+                    "inputs": [
+                        "HOW AFRICAN AMERICANS WERE IMMIGRATED TO THE US"
+                    ],
+                    "outputs": [
+                        " African Americans were first brought to the United States as slaves, starting in the early 1600s. The Atlantic slave trade, primarily concentrated in West Africa, saw millions of men, women, and children traded and eventually transported to the Americas. Though emancipation led to the abolition of slavery in 1865, the effects"
+                    ],
+                    "expected": "African immigration to the United States refers to immigrants to the United States who are or were nationals of Africa .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are glacier caves formed?"
+                    ],
+                    "outputs": [
+                        " Glacier caves are formed by the erosion of ice by moving water and waves. As water melts and refreezes, it forms tunnels and caves. The cave walls often display sculpted forms."
+                    ],
+                    "expected": "A partly submerged glacier cave on Perito Moreno Glacier .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How are the directions of the velocity and force vectors related in a circular motion"
+                    ],
+                    "outputs": [
+                        " The direction of the velocity vector in a circular motion is constantly changing, whereas the direction of the force vector is always directed toward the center of the circle."
+                    ],
+                    "expected": "In physics , circular motion is a movement of an object along the circumference of a circle or rotation along a circular path.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how large were early jails"
+                    ],
+                    "outputs": [
+                        " Early jails were often quite small but served an important purpose in the legal system. They were designed to hold individuals awaiting their day in court, as well as those who had been convicted and were serving out their sentence. In the United States, these early jails were often just cells in the local sheriff's"
+                    ],
+                    "expected": "A prison (from Old French prisoun), also known as gaol or jail, is a place in which people are physically confined and usually deprived of a range of personal freedoms .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how a water pump works"
+                    ],
+                    "outputs": [
+                        " A water pump is a device that helps to move water from one place to another. It consists of a motor, an impeller, and a volute or a cylindrical chamber. The motor is connected to the impeller and when activated, it causes the impeller to spin and generate centrif"
+                    ],
+                    "expected": "A small, electrically powered pump",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did apollo creed die"
+                    ],
+                    "outputs": [
+                        " Apollo Creed died after being punched and knocked out by Ivan Drago during a championship boxing match."
+                    ],
+                    "expected": "Apollo Creed is a fictional character from the Rocky films , initially portrayed as the Undisputed Heavyweight Champion of the World.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long is the term for federal judges"
+                    ],
+                    "outputs": [
+                        " The term for federal judges is a lifetime appointment, although they can be impeached or resign for various reasons."
+                    ],
+                    "expected": "In the United States, the title of federal judge usually means a judge appointed by the President of the United States and confirmed by the United States Senate pursuant to the Appointments Clause in Article II of the United States Constitution .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how a beretta model 21 pistols magazines works"
+                    ],
+                    "outputs": [
+                        " The Beretta Model 21 is a well-crafted and reliable semi-automatic pistol. Its magazine is a single-stack box-type detachable type with a capacity of up to 13 rounds. It is designed to insert the loaded magazine into the pistol grip where it locks in securely. The magazine release"
+                    ],
+                    "expected": "The Beretta 21A Bobcat is a small pocket-sized semi-automatic pistol designed by Beretta in Italy.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How are epithelial tissues joined together?"
+                    ],
+                    "outputs": [
+                        " Epithelial tissues are joined together through specialized structures called cell junctions. This includes tight junctions, adherens junctions, gap junctions, and desmosomes. Together, these junctions help create a barrier to keep molecules and pathogens out of the body while also allowing materials and"
+                    ],
+                    "expected": "Cross section of sclerenchyma fibers in plant ground tissue",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how a vul works"
+                    ],
+                    "outputs": [
+                        " A vulnerability (or \u201cvul\u201d) is a type of security breach or loophole that can be exploited to gain unauthorized access to a computer system, network, or application. It typically involves an unintentional software, hardware, or configuration error that allows malicious individuals or groups to gain access to sensitive"
+                    ],
+                    "expected": "Variable Universal Life Insurance (often shortened to VUL) is a type of life insurance that builds a cash value.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how an outdoor wood boiler works"
+                    ],
+                    "outputs": [
+                        " An outdoor wood boiler works by burning wood to create heat. The heat is then transferred to an accumulator where it is stored until it is needed. The stored heat is then used to heat a home or other building. The boiler is built outside to take advantage of the natural environment and to reduce the"
+                    ],
+                    "expected": "The outdoor wood boiler is a variant of the classic wood stove adapted for set-up outdoors while still transferring the heat to interior buildings.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big is bmc software in houston, tx"
+                    ],
+                    "outputs": [
+                        " BMC Software is a global company with a very large presence in Houston, TX. It is headquartered in Houston and employs more than 8,000 people in the city."
+                    ],
+                    "expected": "BMC Software, Inc. is an American company specializing in Business Service Management (BSM) software.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big did girl scout cookie boxes used to be"
+                    ],
+                    "outputs": [
+                        " In the past, girl scout cookie boxes used to be quite petite in size. They usually came in four-ounce boxes filled with a variety of delectable treats."
+                    ],
+                    "expected": "A mound of Girl Scout cookies.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big is the purdue greek system"
+                    ],
+                    "outputs": [
+                        " Purdue's Greek system is made up of more than 6,000 students in 83 fraternity and sorority organizations. These organizations represent a variety of interests, including service, professional development, social networking and academic excellence."
+                    ],
+                    "expected": "University Hall",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big do sebaceous cysts get"
+                    ],
+                    "outputs": [
+                        " Sebaceous cysts can range in size from very small to quite large. It is not uncommon for a sebaceous cyst to grow to the size of a golf ball or larger. If a cyst becomes too large, it can cause pain or discomfort, and medical intervention may be necessary to"
+                    ],
+                    "expected": "A sebaceous cyst () is a term that loosely refers to either epidermoid cysts (also known as epidermal cysts; L72.0 ) or pilar cysts (also known as trichilemmal cysts; L72.1 ).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are pointe shoes made"
+                    ],
+                    "outputs": [
+                        " Pointe shoes are made from particular materials designed to give a dancer the maximum stability and support needed for the demanding technique. Most pointe shoes are made from layers of fabrics and leather, which are carefully stitched together. The materials are then molded around a steel shank that provides support in each shoe"
+                    ],
+                    "expected": "Modern pointe shoes.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is 1 tablespoon of water"
+                    ],
+                    "outputs": [
+                        " 1 tablespoon of water is equal to 15 milliliters, or 0.51 ounces."
+                    ],
+                    "expected": "This tablespoon has a capacity of about 15 mL.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much are the harry potter movies worth"
+                    ],
+                    "outputs": [
+                        " The Harry Potter movie franchise is estimated to be worth over $7 billion, making it one of the most profitable movie franchises of all time."
+                    ],
+                    "expected": "Harry Potter is a series of seven fantasy novels written by the British author J. K. Rowling .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how a rocket engine works"
+                    ],
+                    "outputs": [
+                        " A rocket engine works by converting the energy stored in rocket fuel into the force of thrust. This thrust is created by the rocket engine's combustion chamber, which causes pressurized gas to expand and escape from the rocket nozzle at a high velocity. The resulting thrust is what propels the rocket through the air"
+                    ],
+                    "expected": "RS-68 being tested at NASA's Stennis Space Center.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old was britney spears when she recorded hit me baby one more time"
+                    ],
+                    "outputs": [
+                        " Britney Spears was just 16-years-old when she recorded her iconic hit \"Hit Me Baby One More Time\" in 1998."
+                    ],
+                    "expected": "...Baby One More Time is a song by American recording artist Britney Spears .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old was sue lyon when she made lolita"
+                    ],
+                    "outputs": [
+                        " Sue Lyon was 14-years-old when she starred in the 1962 film adaptation of Lolita."
+                    ],
+                    "expected": "Lolita is a 1962 comedy-drama film by Stanley Kubrick based on the classic novel of the same title by Vladimir Nabokov , centres around a middle-aged man who becomes obsessed with a teenage girl.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are cholera and typhus transmitted and prevented"
+                    ],
+                    "outputs": [
+                        " Cholera and typhus are transmitted through contact with infected food or water and through certain animal species. To prevent these illnesses, it is important to practice proper hygiene, such as regularly washing hands and food preparation surfaces, avoiding contact with animals, using clean and safe water sources, and properly treating food"
+                    ],
+                    "expected": "Cholera is an infection in the small intestine caused by the bacterium Vibrio cholerae .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is sybil vane in the picture of dorian gray"
+                    ],
+                    "outputs": [
+                        " In the novel The Picture of Dorian Gray, Sybil Vane is 18 years old."
+                    ],
+                    "expected": "The Picture of Dorian Gray is the only published novel by Oscar Wilde , appearing as the lead story in Lippincott's Monthly Magazine on 20 June 1890, printed as the July 1890 issue of this magazine.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is zsa zsa gabor's daughter"
+                    ],
+                    "outputs": [
+                        " Zsa Zsa Gabor's daughter, Francesca Hilton, was born in 1947 and is 73 years old."
+                    ],
+                    "expected": "S\u00e1ri G\u00e1bor (born 6 February 1917), known as Zsa Zsa Gabor (), is a Hungarian -born American actress who acted in supporting roles in movies, on Broadway , and occasionally on television .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how bruce lee died"
+                    ],
+                    "outputs": [
+                        " Bruce Lee had a rare allergic reaction to an ingredient contained in Equagesic, a muscle relaxant he was taking to help relieve pain caused by the rip of an old back injury; he died on July 20, 1973."
+                    ],
+                    "expected": "Bruce Lee (traditional :\u674e\u5c0f\u9f8d; born Lee Jun-fan; 27 November 1940 \u2013 20 July 1973) was a Chinese American martial artist , actor, martial arts instructor, philosopher, and filmmaker.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how active can one be with copd"
+                    ],
+                    "outputs": [
+                        " Copd can make it difficult to be active, but there are still many ways to stay active with the condition. It is important to create a personalized exercise routine that meets your specific needs, and to avoid activities that may put too much strain on your lungs. With the guidance of a healthcare provider and"
+                    ],
+                    "expected": "Chronic obstructive pulmonary disease (COPD), also known as chronic obstructive lung disease (COLD), chronic obstructive airway disease (COAD), chronic airflow limitation (CAL) and chronic obstructive respiratory disease (CORD), is the occurrence of chronic bronchitis or emphysema , a pair of commonly co-existing diseases of the lungs in which the airways narrow over time.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did anne frank die"
+                    ],
+                    "outputs": [
+                        " Anne Frank tragically died at the Bergen-Belsen concentration camp in 1945 from typhus, a disease spread by lice and also caused by the abysmal conditions of the camp."
+                    ],
+                    "expected": "Annelies \"Anne\" Marie Frank (, ?, ; 12 June 1929early March 1945) is one of the most discussed Jewish victims of the Holocaust .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is kurt cobain's daughter"
+                    ],
+                    "outputs": [
+                        " Kurt Cobain's daughter, Frances Bean Cobain, is 27 years old."
+                    ],
+                    "expected": "Kurt's signature",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are aircraft radial engines built"
+                    ],
+                    "outputs": [
+                        " Aircraft radial engines are typically built using aluminum alloys for the cylinder and piston heads, steel and nickel alloys for the pistons and connecting rods, and hard steel and chrome for the crankshaft and camshafts. The combination of these materials provides the strength, durability, and resistance"
+                    ],
+                    "expected": "Radial engine timing and cam mechanism.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old were golden girls at time of show"
+                    ],
+                    "outputs": [
+                        " The Golden Girls premiered in 1985 when the main cast members were all in their 50s. Estelle Getty was the oldest at sixty-seven, followed by Betty White at sixty-five, Rue McClanahan at fifty-seven, and Bea Arthur at fifty-six."
+                    ],
+                    "expected": "The Golden Girls is an American sitcom, created by Susan Harris , that originally aired on NBC from September 13, 1985, to May 9, 1992.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how deep can be drill for deep underwater"
+                    ],
+                    "outputs": [
+                        " Drills can reach into the ocean floor as far as 7,500 meters, depending on the type of drilling equipment used. This depth allows for the drilling of deep underwater wells for exploration and observation."
+                    ],
+                    "expected": "Deepwater drilling is the process of oil and gas exploration and production in depths of more than 500 feet.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old was monica lewinsky during the affair"
+                    ],
+                    "outputs": [
+                        " Monica Lewinsky was 24 years old when her affair with President Bill Clinton began."
+                    ],
+                    "expected": "Monica Samille Lewinsky (born July 23, 1973) is an American woman with whom United States President Bill Clinton admitted to having had an \"improper relationship\" while she worked at the White House in 1995 and 1996.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long was frank sinatra famous"
+                    ],
+                    "outputs": [
+                        " Frank Sinatra was a legendary singer, songwriter, actor and producer who had an incredibly successful career spanning more than six decades. He became a household name during the mid-1900s and remained beloved until his death in 1998."
+                    ],
+                    "expected": "Francis Albert \"Frank\" Sinatra, , (December 12, 1915 \u2013 May 14, 1998) was an American singer and film actor.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are antibodies used in"
+                    ],
+                    "outputs": [
+                        " Antibodies are used in many ways, including in medical treatments and diagnostics, to fight disease and infections, and as reagents in research processes. They are also critical components of the body's immune system, helping the body recognize and fight off foreign invaders like viruses and bacteria."
+                    ],
+                    "expected": "Each antibody binds to a specific antigen ; an interaction similar to a lock and key.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big is cornhole hole"
+                    ],
+                    "outputs": [
+                        " Cornhole holes are 6 inches in diameter."
+                    ],
+                    "expected": "Typical cornhole board",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is a gold 1986 American Eagle worth?"
+                    ],
+                    "outputs": [
+                        " The value of a 1986 American Eagle very depending on its condition. Generally, one in good condition is worth around $400 or more."
+                    ],
+                    "expected": "The American Gold Eagle is an official gold bullion coin of the United States .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is Hot yoga growing yearly"
+                    ],
+                    "outputs": [
+                        " Hot yoga has become increasingly popular over the past few years, with more and more people taking up the practice. According to statistics, Hot yoga grew by an estimated 20% in 2020, and is expected to continue to grow in the coming years."
+                    ],
+                    "expected": "Bikram Yoga is a system of yoga that Bikram Choudhury synthesized from traditional hatha yoga techniques and popularized beginning in the early 1970s.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old are the massey brothers"
+                    ],
+                    "outputs": [
+                        " The Massey Brothers are both in their early 30s."
+                    ],
+                    "expected": "Christopher Michael Massey (born 26 January 1990) is an American actor, comedian and rapper best known for starring as Michael Barret in Nickelodeon television series Zoey 101 .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is 7 teaspoons'"
+                    ],
+                    "outputs": [
+                        " 7 teaspoons is equal to 35 milliliters."
+                    ],
+                    "expected": "A conventional teaspoon made of stainless steel.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are the archegonia of the fern and pine cone similar"
+                    ],
+                    "outputs": [
+                        " The archegonia of the fern and pine cone are similar in that they are both reproductive organs for the plants. Both the fern and the pine cone depend on their archegonia for the production of spores in order to propagate."
+                    ],
+                    "expected": "A fern is any one or more of a group of about 12,000 species of plants belonging to the botanical group known as Pteridophyta.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long is a flat membrane roof good for?"
+                    ],
+                    "outputs": [
+                        " On average, a flat membrane roof can last anywhere from 15 to 25 years, depending on the care that is put into maintaining it and the type of material used."
+                    ],
+                    "expected": "Flat roofs in Israel",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how cds are read"
+                    ],
+                    "outputs": [
+                        " CDs are typically read by a device known as an Optical Disc Drive (ODD). This device functions by having a laser beam that scans the surface of the CD and reads the data stored there. The data can then be accessed by the device, allowing it to be used in the normal way."
+                    ],
+                    "expected": "A CD-ROM () is a pre-pressed compact disc which contains data .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is jk rowling worth"
+                    ],
+                    "outputs": [
+                        " JK Rowling is estimated to be worth around US$1 billion, according to Forbes. She is currently one of the world's highest-paid authors, with an impressive fortune."
+                    ],
+                    "expected": "Joanne \"Jo\" Rowling (), (born 31 July 1965), pen name J. K. Rowling, is a British novelist, best known as the author of the Harry Potter fantasy series.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big is auburndale florida"
+                    ],
+                    "outputs": [
+                        " Auburndale, Florida is a city in Polk County, with a population of about 18,000 people. It is about 10 square miles in size."
+                    ],
+                    "expected": "Auburndale is a city in Polk County, Florida , United States .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are tropical storms and hurricanes named"
+                    ],
+                    "outputs": [
+                        " Tropcial storms and hurricanes are generally named by the World Meteorological Organization. Names are assigned alphabetically based on the area and year of the storm or hurricane. Names are not used again in order to avoid confusion."
+                    ],
+                    "expected": "Hurricane Isabel (2003) as seen from orbit during Expedition 7 of the International Space Station .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is kirk douglas, the actor?"
+                    ],
+                    "outputs": [
+                        " Kirk Douglas, the actor, is 103 years old."
+                    ],
+                    "expected": "Kirk Douglas (born Issur Danielovitch, ; December 9, 1916) is an American stage and film actor, film producer and author.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is the singer bob seger"
+                    ],
+                    "outputs": [
+                        " Bob Seger is 73 years old."
+                    ],
+                    "expected": "Robert Clark \"Bob\" Seger (born May 6, 1945) is an American rock and roll singer-songwriter , guitarist and pianist .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is alicia in 2009"
+                    ],
+                    "outputs": [
+                        " Alicia was 25 years old in 2009."
+                    ],
+                    "expected": "Alicia Augello Cook (born January 25, 1981), known professionally as Alicia Keys, is an American R&B singer-songwriter , musician, record producer and actress.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long was i love lucy on the air"
+                    ],
+                    "outputs": [
+                        " I Love Lucy was on the air for six seasons, running from 1951 to 1957, and producing 180 episodes in total."
+                    ],
+                    "expected": "I Love Lucy is an American television sitcom starring Lucille Ball , Desi Arnaz , Vivian Vance , and William Frawley .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big is a land section generally"
+                    ],
+                    "outputs": [
+                        " Land sections typically vary in size, as they can range from around an acre to thousands of acres. It all depends on the particular section of land and the purpose for which it is intended."
+                    ],
+                    "expected": "Sectioning a township .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long was richard nixon a president"
+                    ],
+                    "outputs": [
+                        " Richard Nixon served as the 37th President of the United States from 1969 to 1974."
+                    ],
+                    "expected": "Richard Milhous Nixon (January 9, 1913 \u2013 April 22, 1994) was the 37th President of the United States , serving from 1969 to 1974, when he became the only president to resign the office.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did bleeding sumner lead to the civil war"
+                    ],
+                    "outputs": [
+                        " Bleeding Sumner was a term referring to the caning of Senator Charles Sumner by Congressman Preston Brooks in 1856. This heinous act inflamed the nation's feelings regarding slavery, which then escalated tensions between the North and South and ultimately led to the start of the Civil War."
+                    ],
+                    "expected": "{{Infobox Senator",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are business ethics different in Africa and United States"
+                    ],
+                    "outputs": [
+                        " In the United States, business ethics primarily focus on a code of conduct that emphasizes lawfulness, fairness, and social responsibility. In Africa, on the other hand, ethical standards focus more on interpersonal relationships and emphasize loyalty, harmony, and trust. Additionally, allegiance to the community is also a major factor"
+                    ],
+                    "expected": "Business ethics (also corporate ethics) is a form of applied ethics or professional ethics that examines ethical principles and moral or ethical problems that arise in a business environment.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how bad burns go to burn center"
+                    ],
+                    "outputs": [
+                        " Burns can be extremely serious and require specialized care. If you have a bad burn, it's important to seek care from a burn center for the best possible outcome."
+                    ],
+                    "expected": "A burn is a type of injury to flesh or skin caused by heat , electricity , chemicals , friction , or radiation .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old was shakespeare's juliet"
+                    ],
+                    "outputs": [
+                        " Juliet was 13 years old when Shakespeare wrote the play Romeo and Juliet."
+                    ],
+                    "expected": "Juliet is one of the title characters in William Shakespeare 's romantic love tragedy Romeo and Juliet , the other being Romeo .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how deep is the atlantic ocean"
+                    ],
+                    "outputs": [
+                        " The average depth of the Atlantic Ocean is approximately 2.5 miles. It is the second deepest ocean in the world, surpassed only by the Pacific Ocean."
+                    ],
+                    "expected": "The Atlantic Ocean, not including Arctic and Antarctic regions",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are storm names determined?"
+                    ],
+                    "outputs": [
+                        " Storm names are determined by rotating lists of names assigned by the World Meteorological Organization. The lists are set up in alphabetical order and consist of one year's worth of storms."
+                    ],
+                    "expected": "Due to their long-term persistence, and the need for a unique identifier in issuing forecasts and warnings, tropical cyclones and subtropical cyclones are given names according to policy (see Tropical cyclone naming ).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are fire bricks made"
+                    ],
+                    "outputs": [
+                        " Fire bricks are made from fire clay and refractory cement, which are heated in a kiln to temperatures of up to 2,300\u00b0F. The heat creates a chemical reaction between the components, which produces an extremely strong material that resists thermal shock and provides excellent insulation."
+                    ],
+                    "expected": "Refractory bricks in a torpedo car used for hauling molten iron",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big or small a visible light can get"
+                    ],
+                    "outputs": [
+                        " Visible light can come in any size, from the smallest atom to encompasses entire galaxies. However, visible light is the part of the electromagnetic spectrum that exists between 400 and 700 nanometers, so all visible light will have to be within that range."
+                    ],
+                    "expected": "White light is dispersed by a prism into the colors of the optical spectrum.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "HOW MUCH IS CENTAVOS IN MEXICO"
+                    ],
+                    "outputs": [
+                        " Centavos are a type of currency in Mexico and are worth 1/100 of a peso."
+                    ],
+                    "expected": "The peso ( sign : $; code : MXN) is the currency of Mexico .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big are baby zebras when born"
+                    ],
+                    "outputs": [
+                        " Baby zebras, also known as foals, are generally around 3 feet tall and 80-95 pounds when they are born."
+                    ],
+                    "expected": "Zebras ( or ) are several species of African equids (horse family) united by their distinctive black and white stripes.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How did Barry White die?"
+                    ],
+                    "outputs": [
+                        " Barry White passed away on July 4th, 2003 due to complications related to renal failure. He was only 58 years old."
+                    ],
+                    "expected": "Barry White, born Barry Eugene Carter ( \u2013 ), was an American composer and singer-songwriter .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did angelina jolie get her name?"
+                    ],
+                    "outputs": [
+                        " Angelina Jolie's name was given to her by her actor parents, Jon Voight and Marcheline Bertrand. Voight named her after an italian saint named Angelina, while Bertrand combined her first name with the middle name of her brother, James Haven."
+                    ],
+                    "expected": "Angelina Jolie ( , born Angelina Jolie Voight; June 4, 1975) is an American actress, film director, and screenwriter.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how can plant gases slow erosion"
+                    ],
+                    "outputs": [
+                        " Plant gases like nitrogen, oxygen and carbon dioxide can slow erosion by nurturing plant growth, which increases soil stability and improves water conservation. Healthy plants reduce the impact of wind, rain, and other environmental factors that can cause erosion."
+                    ],
+                    "expected": "A natural arch produced by the erosion of differentially weathered rock in Jebel Kharaz, Jordan",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How long was Mickie James with WWE?"
+                    ],
+                    "outputs": [
+                        " Mickie James was with the WWE from 2005 to 2010, with her most recent return to the company in 2018."
+                    ],
+                    "expected": "Mickie Laree James (born August 31, 1979) is an American professional wrestler and singer , currently signed to Total Nonstop Action Wrestling (TNA), where she is a former two-time TNA Women's Knockout Champion .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long was angelina on the jersey shore?"
+                    ],
+                    "outputs": [
+                        " Angelina was on the Jersey Shore for one season."
+                    ],
+                    "expected": "Jersey Shore is an American reality television series which ran on MTV from December 3, 2009 to December 20, 2012 in the United States.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did armando christian perez become famous"
+                    ],
+                    "outputs": [
+                        " Armando Christian P\u00e9rez became famous for his rap and hip-hop music as the artist \u201cPitbull\u201d. He also achieved international success with his collaborations with other popular music artists. His unique sound and style has made him one of the top Latin music stars of today."
+                    ],
+                    "expected": "Armando P\u00e9rez (born January 15, 1981), better known by his stage name Pitbull, is an American rapper, songwriter, and record producer.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how can a territory become a state"
+                    ],
+                    "outputs": [
+                        " In order for a territory to become a state, it must pass a resolution of independence or petition Congress to become a state. The process then requires approval from Congress, a vote by the President, and approval from the Supreme Court. Once all requirements are met, the territory becomes an official state of the"
+                    ],
+                    "expected": "right",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how can something taste good to one person"
+                    ],
+                    "outputs": [
+                        " Taste is subjective, so what is good to one person may not necessarily be good to another. Everyone has different taste buds and preferences, so it's important to take those into account when determining what tastes good to a particular individual."
+                    ],
+                    "expected": "Taste bud",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How did Bob Marley die?"
+                    ],
+                    "outputs": [
+                        " Bob Marley died from acral melanoma, a rare form of cancer, on May 11, 1981 at age 36."
+                    ],
+                    "expected": "Nesta Robert \"Bob\" Marley, OM (6 February 1945 \u2013 11 May 1981) was a Jamaican singer-songwriter and musician.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old was arnold in terminator 3"
+                    ],
+                    "outputs": [
+                        " Arnold Schwarzenegger was 50 years old when he starred in Terminator 3."
+                    ],
+                    "expected": "Terminator 3: Rise of the Machines (commonly abbreviated as T3) is a 2003 science fiction action film directed by Jonathan Mostow and starring Arnold Schwarzenegger , Nick Stahl , Claire Danes and Kristanna Loken .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is youngest mother in the world"
+                    ],
+                    "outputs": [
+                        " The youngest mother in the world is believed to be Lina Medina from Peru, who gave birth to a son at the age of 5 years, 7 months and 21 days old."
+                    ],
+                    "expected": "This is a list of known biological mothers under 11 years of age.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much was the production of willy wonka and the chocolate factory"
+                    ],
+                    "outputs": [
+                        " The production of Willy Wonka and the Chocolate Factory was reported to be around $3 million."
+                    ],
+                    "expected": "Willy Wonka & the Chocolate Factory is a 1971 musical film adaptation of the 1964 novel Charlie and the Chocolate Factory by Roald Dahl , directed by Mel Stuart , and starring Gene Wilder as Willy Wonka .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is a cord of wood"
+                    ],
+                    "outputs": [
+                        " A cord of wood typically costs anywhere from $100-$400, depending on the variety of wood, the time of year, and the location."
+                    ],
+                    "expected": "A cord of wood",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much was game boy color when it came out"
+                    ],
+                    "outputs": [
+                        " The Game Boy Color was first released in Japan in October 1998 and was priced at 3,800 yen."
+                    ],
+                    "expected": "The , is an 8-bit handheld video game device developed and manufactured by Nintendo .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old were the twin towers when destroyed"
+                    ],
+                    "outputs": [
+                        " The Twin Towers of the World Trade Center were founded in 1973, so they were about 28 years old when they were destroyed on September 11, 2001."
+                    ],
+                    "expected": "The World Trade Center is a complex of buildings under construction in Lower Manhattan , New York City , United States , replacing an earlier complex of seven buildings with the same name on the same site.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are transverse ranges formed"
+                    ],
+                    "outputs": [
+                        " Transverse ranges are formed through thrust faulting, which is the process of two plates of rock pushing against each other and forcing the ground in between them to lift upwards. Thrust faulting is responsible for the formation of many mountain ranges around the world, including the Transverse Ranges."
+                    ],
+                    "expected": "San Gabriel Mountains",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are the # of electrons in each shell determined"
+                    ],
+                    "outputs": [
+                        " The number of electrons in each shell is determined by the number of electron shells, which are designated as s, p, d, and f. The number of these shells in an atom is determined by the number of protons and the number of orbital electrons for a given element. For example, hydrogen"
+                    ],
+                    "expected": "Periodic table with electron shells",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old was anna nicole smith when she meet her old husband"
+                    ],
+                    "outputs": [
+                        " Anna Nicole Smith met her first husband in 1967 when she was only 17 years old."
+                    ],
+                    "expected": "Vickie Lynn Marshall (n\u00e9e Hogan; November 28, 1967 \u2013 February 8, 2007), known by her moniker Anna Nicole Smith, was an American model, actress, and television personality.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is a ream of paper"
+                    ],
+                    "outputs": [
+                        " A ream of paper typically costs between $5 and $15, depending on the quality of the paper."
+                    ],
+                    "expected": "Various measures of paper quantity have been and are in use.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is a yen coin"
+                    ],
+                    "outputs": [
+                        " A Japanese yen coin is worth around 0.009 US dollars."
+                    ],
+                    "expected": "The is one denomination of Japanese yen .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how can i open a usda slaughterhouse"
+                    ],
+                    "outputs": [
+                        " To open a USDA slaughterhouse, you must obtain a USDA Slaughterhouse License. This requires meeting certain standards and passing an inspection. You will also need to register with the U.S. Department of Agriculture and fill out paperwork related to animal welfare and food safety."
+                    ],
+                    "expected": "Workers and cattle in a slaughterhouse",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how tall are the members of tlc"
+                    ],
+                    "outputs": [
+                        " The members of TLC range in height, with T-Boz standing at 5'2\u201d, Chilli at 5'9\u201d, and the late Lisa \"Left Eye\" Lopes at 5'2\"."
+                    ],
+                    "expected": "TLC is an American girl group whose repertoire spanned R&B , hip hop , soul , funk , and new jack swing .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long is the tarzan movie"
+                    ],
+                    "outputs": [
+                        " The Tarzan movie is roughly 90 minutes long."
+                    ],
+                    "expected": "Tarzan is a 1999 American animated adventure film produced by Walt Disney Feature Animation and distributed by Walt Disney Pictures .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how an oil rig works"
+                    ],
+                    "outputs": [
+                        " An oil rig is a large structure with machinery used to drill and extract oil from below the earth's surface. The process of extracting oil involves creating a borehole or reservoir in the ground and inserting a pipe into it called the drill string. This pipe is then filled with heavy drilling fluid and is rotated"
+                    ],
+                    "expected": "Oil Platform P-51 off the Brazilian coast is a semi-submersible platform .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much is an adult film actor paid"
+                    ],
+                    "outputs": [
+                        " An adult film actor typically earns between $400 and $1000 per scene. Payment varies depending on the genre and scene expectations. Some actors may also receive additional fees for extras, such as costumes and props."
+                    ],
+                    "expected": "A pornographic actor or actress or a porn star is a person who performs sex acts in film, normally characterised as a pornographic film .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how close or far do you want to be to the standard deviation"
+                    ],
+                    "outputs": [
+                        " It really depends on the situation. The standard deviation tells us how much variation there is in a dataset, so if we are trying to stay within a certain range then we need to be close to the standard deviation. On the other hand, if we are looking for outliers or trends that are far"
+                    ],
+                    "expected": "A plot of a normal distribution (or bell-shaped curve) where each band has a width of 1 standard deviation \u2013 See also: 68-95-99.7 rule",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are sheep slaughtered"
+                    ],
+                    "outputs": [
+                        " Sheep are typically slaughtered by slitting their throats with a sharpened knife. Other methods of slaughter, such as stunning the animal with a bolt gun, are sometimes used, but are less common."
+                    ],
+                    "expected": "Slaughter is the killing of animals , usually that of domestic livestock for food .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how deadly are brain tumors"
+                    ],
+                    "outputs": [
+                        " Brain tumors can be deadly depending on the type, size, and location of the tumor. Treatments vary depending on the severity and characteristics of the tumor, but in cases where tumors are not immediately life-threatening, treatment options may include surgery, radiation therapy, chemotherapy, and targeted therapy."
+                    ],
+                    "expected": "A brain tumor, or tumour, is an intra cranial solid neoplasm , a tumor (defined as an abnormal growth of cells) within the brain or the central spinal canal .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many presidents of the us"
+                    ],
+                    "outputs": [
+                        " There have been 45 presidents of the United States."
+                    ],
+                    "expected": "The White House , the president's official residence and center of the administration",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how a silencer works"
+                    ],
+                    "outputs": [
+                        " A silencer, or suppressor, works to reduce the noise of a firearm. They work by trapping and slowing down the expanding gases that exit the barrel of a gun when a bullet is fired. This allows the expanding gases to cool and decelerate and dissipate before leaving the muzzle, resulting"
+                    ],
+                    "expected": "Several firearms with detachable suppressors, from top to bottom: An Uzi , An AR-15 , A Heckler & Koch USP Tactical, A Beretta 92FS , and a SIG Mosquito .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how tall is an indoor girls volleyball net"
+                    ],
+                    "outputs": [
+                        " The standard height for an indoor girls volleyball net is 7 feet and 4 inches from the ground to the top of the net."
+                    ],
+                    "expected": "Volleyball is a team sport in which two teams of six players are separated by a net.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How much is US National Debt limit?"
+                    ],
+                    "outputs": [
+                        " The US National Debt limit is currently set at $22 trillion."
+                    ],
+                    "expected": "U.S. debt from 1940 to 2011.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did athenians make money"
+                    ],
+                    "outputs": [
+                        " The Ancient Athenians made money from a wide variety of sources, including trade, fishing, pottery, metalworking, and other crafts. They also generated money through taxation levied on the citizens and from taxes imposed on citizens of other Greek City States. Additionally, they made money from tribute, which was"
+                    ],
+                    "expected": "Athenian democracy developed in the Greek city-state of Athens , comprising the central city-state of Athens and the surrounding territory of Attica , around 550 BC.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old is beatrice author"
+                    ],
+                    "outputs": [
+                        " Beatrice Author's age is unknown."
+                    ],
+                    "expected": "Beatrice \"Bea\" Arthur (May 13, 1922 \u2013 April 25, 2009) was an American actress, comedienne, and singer whose career spanned seven decades.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long is tekken blood vengeance movie"
+                    ],
+                    "outputs": [
+                        " Tekken: Blood Vengeance is an anime movie that was released in 2011 and has a run time of approximately 81 minutes."
+                    ],
+                    "expected": "is a 2011 Japanese 3D computer-animated film based on the Tekken video game series, produced by Digital Frontier and distributed by Asmik Ace Entertainment in association with Bandai Entertainment.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how can hoa collect unpaid fees on property"
+                    ],
+                    "outputs": [
+                        " The HOA can collect unpaid fees on property in a variety of ways. The most common methods include sending reminder emails, letters or text messages to delinquent residents, posting a public lien, and even seeking legal action. It is important to ensure that all collection efforts are in compliance with local laws."
+                    ],
+                    "expected": "For a discussion of nonprofit, voluntary neighborhood advocacy groups, see neighborhood association .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how big can texel guinea pigs become"
+                    ],
+                    "outputs": [
+                        " Texel guinea pigs can reach a maximum adult size of about 10-12 inches long. They tend to be strong and hardy animals that can live up to 8 years with proper care."
+                    ],
+                    "expected": "A prize-winning lilac-and-white Silkie",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are public schools funded"
+                    ],
+                    "outputs": [
+                        " Public schools are funded primarily through tax revenue. State and local governments provide most of the funding, but the federal government also contributes certain funds. The specifics of how public schools are funded varies from state to state."
+                    ],
+                    "expected": "State schools (also known as public schools or government schools) generally refer to primary or secondary schools mandated for or offered to all children without charge paid for, in whole or in part, by taxation .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how are ribosomes made"
+                    ],
+                    "outputs": [
+                        " Ribosomes are made from proteins and ribonucleic acid (RNA) molecules, which make up the larger part of the ribosome. The proteins are pre-assembled in the cell's cytoplasm and then bind together with the RNA molecules to form the ribosome. The"
+                    ],
+                    "expected": "The ribosome assembles polymeric protein molecules whose sequence is controlled by the sequence of messenger RNA molecules.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what happens  to the light independent reactions of photosynthesis?"
+                    ],
+                    "outputs": [
+                        "The light independent reactions of photosynthesis involve the use of the energy from the ATP and NADPH molecules created in the light dependent reactions to convert carbon dioxide into organic compounds such as glucose. The result is the production of food for the plant."
+                    ],
+                    "expected": "The simplified internal structure of a chloroplast",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How Do You Find the mean of the squares of the first 10 counting numbers"
+                    ],
+                    "outputs": [
+                        " To find the mean of the squares of the first 10 counting numbers, calculate the sum of the squares and then divide that amount by 10 to get the mean."
+                    ],
+                    "expected": "In mathematics , a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how does interlibrary loan work"
+                    ],
+                    "outputs": [
+                        " Interlibrary loan is a service that allows library patrons to borrow from other libraries. Typically the requesting library makes an electronic request to the lending library, and the lending library decides whether to fill the request. Once approved, the items are usually shipped directly to the requesting library and then checked out to the patron"
+                    ],
+                    "expected": "Interlibrary loan (abbreviated ILL, and sometimes called interloan, document delivery, or document supply) is a service whereby a user of one library can borrow books or receive photocopies of documents that are owned by another library.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what ended the era of good feelings"
+                    ],
+                    "outputs": [
+                        " The Panic of 1819 marked the end of the Era of Good Feelings in the United States. The Panic of 1819 was an economic recession that lasted for several years and had devastating effects on the American economy and society."
+                    ],
+                    "expected": "The Era of Good Feelings marked a period in the political history of the United States that reflected a sense of national purpose and a desire for unity among Americans in the aftermath of the Napoleonic Wars .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what did mia hamm do his work"
+                    ],
+                    "outputs": [
+                        " Mia Hamm did her work with excellence and passion, becoming one of the most successful soccer players of all time. She won two World Cup Championships and two Olympic gold medals and was named FIFA World Player of the Year in 2001 and 2002. Hamm scored 158 international goals and was the first American woman to reach"
+                    ],
+                    "expected": "Mariel Margaret \"Mia\" Hamm (born March 17, 1972) is a retired American professional soccer player.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what bacteria grow on macconkey agar"
+                    ],
+                    "outputs": [
+                        " MacConkey agar is used to differentiate between gram-negative and gram-positive bacteria. It contains bile salts and crystal violet, which can inhibit the growth of many gram-positive bacteria and allow for the growth of many enteric gram-negative bacteria such as Salmonella, Shig"
+                    ],
+                    "expected": "A MacConkey agar plate with an active bacterial culture.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did the new york red bulls started in the mls"
+                    ],
+                    "outputs": [
+                        " The New York Red Bulls began their foray into Major League Soccer in 1996 as one of the founding members of the league. The team has since become one of the most successful teams in the Eastern Conference, making several playoff appearances and winning the Supporters' Shield in 2013."
+                    ],
+                    "expected": "The New York Red Bulls is an American professional soccer team based in Harrison, New Jersey , representing the New York metropolitan area .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what countries are under the buddhism religion"
+                    ],
+                    "outputs": [
+                        " Buddhism is the most popular religion in many countries throughout Asia, including Bhutan, China, Japan, Myanmar, Nepal, South Korea, Sri Lanka, Thailand, Taiwan, Cambodia, Tibet, and Vietnam."
+                    ],
+                    "expected": "Confucianism , Taoism , and Buddhism are one, a painting in the litang style portraying three men laughing by a river stream, 12th century, Song Dynasty .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did wild bill's father die"
+                    ],
+                    "outputs": [
+                        " Wild Bill's father died from illness that overwhelmed him after a long and hard-fought battle. He was a brave and courageous man who always stood up for what he believed in even when times were tough. His legacy will always be remembered."
+                    ],
+                    "expected": "James Butler Hickok (May 27, 1837 \u2013 August 2, 1876), better known as Wild Bill Hickok, was a folk hero of the American Old West .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many land rovers have landed on mars"
+                    ],
+                    "outputs": [
+                        " None have yet, as a land rover has never landed and operated on the surface of Mars!"
+                    ],
+                    "expected": "Artist's conception of the Curiosity rover vaporizing rock on Mars.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how do forensic auditors examine financial reporting"
+                    ],
+                    "outputs": [
+                        " Forensic auditors examine financial reporting by utilizing a wide range of investigative techniques, such as reviewing journal entries, performing ratio analyses, interviewing personnel, and validating the accuracy of reported numbers. They compare financial statements and records to check for any discrepancies and identify any potential fraud, waste, or misuse of funds"
+                    ],
+                    "expected": "A financial audit, or more accurately, an audit of financial statements, is the verification of the financial statements of a legal entity , with a view to express an audit opinion.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does a silver dollar 1873 coin look like"
+                    ],
+                    "outputs": [
+                        " A Silver Dollar 1873 coin is a collectible item with a unique appearance. It is round and slightly larger than other coins, with a diameter of 38.1 mm. On the front, it has Lady Liberty wearing a \u201cLiberty\u201d mob cap. On the reverse, it symbol"
+                    ],
+                    "expected": "Dollar coins have been minted in the United States in gold , silver , and base metal versions.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what bird family is the owl"
+                    ],
+                    "outputs": [
+                        " The owl belongs to the family Strigidae, which is commonly known as the true owl family."
+                    ],
+                    "expected": "Owls are a group of birds that belong to the order Strigiformes, constituting 200 extant bird of prey species .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did harmon killebrew get strong"
+                    ],
+                    "outputs": [
+                        " Harmon Killebrew was able to get strong through hard work, dedication, and a strict training regime. He was known for his long hours in the gym, and his regimen included a variety of exercises and workouts designed to increase strength and power. He also focused heavily on eating a healthy, balanced diet"
+                    ],
+                    "expected": "Harmon Clayton Killebrew (; June 29, 1936 \u2013 May 17, 2011), nicknamed \"Killer\" and \"Hammerin' Harmon\", was an American professional baseball first baseman , third baseman , and left fielder .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how fast is one g"
+                    ],
+                    "outputs": [
+                        " One g is the rate of acceleration due to gravity which is approximately 9.8 meters per second squared."
+                    ],
+                    "expected": "In straight and level flight lift (L) equals weight (W).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what happened to sean parker founder of napster"
+                    ],
+                    "outputs": [
+                        " Sean Parker, the founder of Napster, is currently pursuing other business interests and investments. He is known for his work as the Founding President of Facebook, as well as his investments in Spotify, Airbnb, and Causes."
+                    ],
+                    "expected": "Sean Parker (born 1979) is an American entrepreneur who was a co-founder of the file-sharing computer service Napster and the first president of the social networking website Facebook .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What did the augurs use to interpret the will of the gods?"
+                    ],
+                    "outputs": [
+                        " The augurs used bird omens and the flights and calls of specific birds to interpret the will of the gods. They also conducted divination rituals and interpreted portents in nature."
+                    ],
+                    "expected": "An augur holding a lituus , the curved wand often used as a symbol of augury on Roman coins",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How much did Waterboy grossed"
+                    ],
+                    "outputs": [
+                        " Waterboy grossed over $183 million worldwide, making it one of Adam Sandler's most successful films."
+                    ],
+                    "expected": "The Waterboy is a 1998 American sports/comedy film directed by Frank Coraci (who played Robert 'Roberto' Boucher, Sr.), starring Adam Sandler , Kathy Bates , Fairuza Balk , Henry Winkler , Jerry Reed , Larry Gilliard, Jr. , Blake Clark , Peter Dante and Jonathan Loughran , and produced by Robert Simonds and Jack Giarraputo .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What county is Farmington Hills, MI in?"
+                    ],
+                    "outputs": [
+                        " Farmington Hills, MI is located in Oakland County."
+                    ],
+                    "expected": "Farmington Hills is an affluent community in southeastern Michigan .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what do you want from me quotes"
+                    ],
+                    "outputs": [
+                        " \"You can want whatever you want, but all I want is for you to be happy.\""
+                    ],
+                    "expected": "What Do You Want From Me(?) may refer to:",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how were letters sealed in the 1800s"
+                    ],
+                    "outputs": [
+                        " In the 1800s, letters were typically sealed with wax and a signet ring, stamp, or a seal. Sealing wax was made from beeswax and tree resin and melted over the letter flap. Seals were made of metal, clay, ivory, or stone and had designs, initials"
+                    ],
+                    "expected": "Present-day impression of a Late Bronze Age seal",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does a groundhog look for on groundhog day"
+                    ],
+                    "outputs": [
+                        " On Groundhog Day, a groundhog is typically looking for its shadow. If it sees its shadow, then it is believed that winter will continue for six more weeks."
+                    ],
+                    "expected": "Groundhog Day ( Pennsylvania German : Grundsaudaag, Murmeltiertag) is a day celebrated on February 2.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how is the weather in tampa"
+                    ],
+                    "outputs": [
+                        " The weather in Tampa is usually sunny and warm, with temperatures ranging from the mid 70s to the mid 80s. It rains occasionally but rarely will it storm or snow."
+                    ],
+                    "expected": "High resolution image of Tampa Bay region",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what ingredients are in rockstar recovery?"
+                    ],
+                    "outputs": [
+                        " Rockstar Recovery is a ready-to-drink beverage made with several ingredients, including water, cane sugar, citric acid, sodium citrate, taurine, caffeine, panax ginseng root extract, bamboo shoots, B vitamins, and select herbs and fruit flavors."
+                    ],
+                    "expected": "Rockstar (branded ROCKST\u2605R) is an energy drink created in 2001.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What generates gamma radiation"
+                    ],
+                    "outputs": [
+                        " Gamma radiation is generated by the decay of unstable atomic nuclei, such as those of Radium, Cobalt-60, and Cesium-137. It can also be generated artificially in a particle accelerator or nuclear reactor."
+                    ],
+                    "expected": "A diagram of the electromagnetic spectrum, showing various properties across the range of frequencies and wavelengths",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many presidential terms did fdr serve"
+                    ],
+                    "outputs": [
+                        " Franklin Delano Roosevelt (FDR) served a total of four presidential terms, spanning from 1933 - 1945."
+                    ],
+                    "expected": "Franklin Delano Roosevelt ( or ; January 30, 1882 \u2013 April 12, 1945), also known by his initials, FDR, was the 32nd President of the United States (1933\u20131945) and a central figure in world events during the mid-20th century, leading the United States during a time of worldwide economic depression and total war.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how old do you have to be to get in the olympics"
+                    ],
+                    "outputs": [
+                        " To compete in the Olympics, you must be at least 16 years of age, but it varies by Olympic event. Some require you to be at least 18 or even 20 years old. Make sure to check the eligibility requirements before you apply."
+                    ],
+                    "expected": "The modern Olympic Games (, JO) is the leading international sporting event featuring summer and winter sports competitions in which thousands of athletes participate in a variety of competitions .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What committees are joint committees"
+                    ],
+                    "outputs": [
+                        " Joint committees are committees that are shared by both houses of the legislature. They are composed of members from both chambers, and their purpose is to consider and make recommendations on legislation that is of interest to both houses."
+                    ],
+                    "expected": "A Joint Committee is a term in politics that is used to refer to a committee made up of members of both chambers of a bicameral legislature.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "HOW MANY BROTHELS WERE THERE IN THE UNITED STATES IN 1840'S"
+                    ],
+                    "outputs": [
+                        " It's difficult to say exactly how many brothels were operating in the United States during the 1840s. Records from this era are incomplete or nonexistent, so it's difficult to get an exact number. However, given the prevalence of brothels during this time period, it is safe to assume"
+                    ],
+                    "expected": "The regulation of prostitution in the United States is not among the enumerated powers of the federal government ; Under the Tenth Amendment to the United States Constitution , it is therefore exclusively the domain of the states to permit, prohibit, or otherwise regulate commercial sex , except insofar as Congress may regulate it as part of interstate commerce with laws like the Mann Act .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many stripes on the flag"
+                    ],
+                    "outputs": [
+                        " The American flag has thirteen stripes, seven red and six white."
+                    ],
+                    "expected": "The national flag of the United States of America , often simply referred to as the American flag, consists of thirteen equal horizontal stripes of red (top and bottom) alternating with white, with a blue rectangle in the canton (referred to specifically as the \"union\") bearing fifty small, white, five-pointed stars arranged in nine offset horizontal rows of six stars (top and bottom) alternating with rows of five stars.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How many states and territories are within India?"
+                    ],
+                    "outputs": [
+                        " India is composed of 28 states and 8 territories."
+                    ],
+                    "expected": "India is a federal union of states comprising twenty-eight states and seven union territories .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how hard is it to weld a 2 inch schedule 80 pipe"
+                    ],
+                    "outputs": [
+                        " Welding a 2-inch schedule 80 pipe is not an easy task. It requires specialized equipment and skill. It is also important to be aware of safety protocols, as welding can be a dangerous activity. Proper training, adequate preparation, and the right materials are all necessary to ensure a successful welding job"
+                    ],
+                    "expected": "Steel pipes",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how is whooping cough distinguished from similar diseases"
+                    ],
+                    "outputs": [
+                        " Whooping cough, or pertussis, is distinct from other similar respiratory illnesses because of its classic symptom \u2014 a loud, persistent and often violent cough. This type of coughing can lead to difficulty breathing and can cause the patient to make a \"whooping\" sound as they try to inhale."
+                    ],
+                    "expected": "Pertussis \u2014 commonly called whooping cough ( or ) \u2014 is a highly contagious bacterial disease caused by Bordetella pertussis .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what congressional district am i in"
+                    ],
+                    "outputs": [
+                        " Please provide a location so we can determine your congressional district."
+                    ],
+                    "expected": "Congressional districts for the 113th United States Congress",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many people have mariah carey dated?"
+                    ],
+                    "outputs": [
+                        " It is reported that Mariah Carey has dated 14 people throughout her career."
+                    ],
+                    "expected": "Mariah Carey (born March 27, 1970) is an American singer , songwriter , record producer , actress , and philanthropist .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much does cloud 10 cost wikipedia"
+                    ],
+                    "outputs": [
+                        " According to Wikipedia, the cost of Cloud 10 varies depending on the specific services and features required. Generally, it is estimated that Cloud 10 can cost anywhere from $50 per month to upwards of $200 per month."
+                    ],
+                    "expected": "Stratocumulus stratiformis cumulogenitus",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what county is galveston in texas"
+                    ],
+                    "outputs": [
+                        " Galveston is located in Galveston County in the state of Texas."
+                    ],
+                    "expected": "Galveston County is a county located in the U.S. state of Texas within the Houston\u2013Sugar Land\u2013Baytown metropolitan area.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what cities are in the bahamas"
+                    ],
+                    "outputs": [
+                        " The main cities in The Bahamas are Nassau, Freeport, and Paradise Island. Other cities include Grand Bahama, Freeport, Marsh Harbour, Governor\u2019s Harbour, and West End."
+                    ],
+                    "expected": "Nassau",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how does one get pancreatic cancer"
+                    ],
+                    "outputs": [
+                        " Pancreatic cancer is most commonly caused by a combination of genetic, environmental and lifestyle factors. Smoking, obesity and having a family history of this type of cancer can increase the risk. Certain infections, chronic inflammation and exposure to certain chemicals may also increase the risk. Early diagnosis is essential to improving the"
+                    ],
+                    "expected": "Pancreatic cancer is a malignant neoplasm originating from transformed cells arising in tissues forming the pancreas .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many schools are in the big ten"
+                    ],
+                    "outputs": [
+                        " The Big Ten has 14 universities that participate in its athletic programs: the University of Illinois, Indiana University, Iowa State University, the University of Maryland, Michigan State University, the University of Michigan, Minnesota, University of Nebraska-Lincoln, Northwestern University, Ohio State University, Penn State, Purdue University"
+                    ],
+                    "expected": "The Big Ten Conference, formerly Western Conference and Big Nine Conference, is the oldest Division I college athletic conference in the United States .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how is single malt scotch made"
+                    ],
+                    "outputs": [
+                        " Single malt scotch is made through a multi-step process that involves malting the barley, mashing the grains, distilling the liquid in copper stills, and aging the whisky in oak barrels. The end result is a complex and balanced beverage with a unique smoky character."
+                    ],
+                    "expected": "Single Malt Scotch is single malt whisky made in Scotland using a pot still distillation process at a single distillery , with malted barley as the only grain ingredient.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what composer used sound mass"
+                    ],
+                    "outputs": [
+                        " Composer Hector Berlioz utilized Sound Mass in his musical works, such as his opera Les Troyens and his Symphonie Fantastique. He was one of the first musical innovators to use the technique, which produces a dense texture and creates a \u201charmonic blur."
+                    ],
+                    "expected": "A texture may be arranged so as to, \"closely approach the single-object status of fused-ensemble timbres , for example, the beautiful 'northern lights' chord ..., in a very interesting distribution of pitches, produces a fused sound supported by a suspended cymbal roll \" (Erickson (1975), p.166 & 168) .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How Many Judges of Israel"
+                    ],
+                    "outputs": [
+                        " According to the Bible, there were 70 judges of Israel in total."
+                    ],
+                    "expected": "Biblical judges",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what do you call to the grade six pupils?"
+                    ],
+                    "outputs": [
+                        " The grade six pupils can be referred to as sixth graders."
+                    ],
+                    "expected": "Students attending a lecture on linear algebra at the Helsinki University of Technology",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How Do You Play Spades"
+                    ],
+                    "outputs": [
+                        " Spades is a card game that requires players to make bids based on the cards in their hand. The goal is to win the number of tricks you bid. The game is usually played with four players who are divided into teams of two. The game starts with each player being dealt 13 cards. The"
+                    ],
+                    "expected": "Spades is a trick-taking card game devised in the United States in the 1930s.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what continent is australia"
+                    ],
+                    "outputs": [
+                        " Australia is located in the continent of Oceania."
+                    ],
+                    "expected": "Australia is a continent comprising mainland Australia , Tasmania , New Guinea , Seram , possibly Timor , and neighbouring islands.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what causes heart disease"
+                    ],
+                    "outputs": [
+                        " Heart disease can be caused by various issues, such as high blood pressure, poor diet, smoking, high cholesterol, and diabetes. These are all factors that can contribute to the hardening of the arteries, which in turn can lead to heart disease."
+                    ],
+                    "expected": "Cardiovascular disease (also called heart disease) is a class of diseases that involve the heart or blood vessels ( arteries , capillaries , and veins ).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what countries did immigrants come from during the immigration"
+                    ],
+                    "outputs": [
+                        " During the immigration, many people came from countries all over the world, including Europe, Asia, Africa, and the Americas. People's individual stories and destinations were diverse, having come from both developed and underent countries."
+                    ],
+                    "expected": "thumb",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how does rainfall in new york affect the environment?"
+                    ],
+                    "outputs": [
+                        " Rainfall in New York is essential to the environment as it helps keep the air clean and provides water to plants, animals, and humans. However, too much or too little can have serious consequences. Heavy downpours can cause flooding, which can lead to damages to property and the invasion of unwanted"
+                    ],
+                    "expected": "Central Park is nearly twice as big as the world's second-smallest country, Monaco .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how is cia headquarters protected"
+                    ],
+                    "outputs": [
+                        " CIA headquarters is heavily protected with a number of security measures. These include physical and electronic surveillance, as well as specialized personnel who guard the building and its perimeter at all times."
+                    ],
+                    "expected": "The entrance of the CIA New Headquarters Building (NHB) of the George Bush Center for Intelligence.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many people live in atlanta georgia"
+                    ],
+                    "outputs": [
+                        " According to the 2019 US Census estimates, the population of Atlanta, Georgia is 498,044 people."
+                    ],
+                    "expected": "Atlanta (, stressed , locally ) is the capital of and the most populous city in the U.S. state of Georgia , with an estimated 2011 population of 432,427.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What did the hollywood blacklist have to do with McCarthy"
+                    ],
+                    "outputs": [
+                        " The infamous Hollywood blacklist, popularized by Senator Joseph McCarthy, was a list of people who were denied employment due to alleged ties to communism. Many influential people in the entertainment industry were blacklisted, which severely hindered their ability to find employment in the industry."
+                    ],
+                    "expected": "A 1947 propaganda comic book published by the Catechetical Guild Educational Society raising the specter of a Communist takeover",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many smoots in a mile"
+                    ],
+                    "outputs": [
+                        " There are 17,600 smoots in a mile."
+                    ],
+                    "expected": "The smoot () is a nonstandard unit of length created as part of an MIT fraternity prank .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "How did Galahad prepare himself to become a knight?"
+                    ],
+                    "outputs": [
+                        " Galahad prepared to become a knight by honing his physical and mental abilities. He trained in the martial arts and studied the chivalric code, learning about the honor and courage expected of a knight. He dedicated himself to forging his own path to knighthood."
+                    ],
+                    "expected": "Sir Galahad as conceived by George Frederick Watts (1817\u20131904).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how does frederick trick napoleon in animal farm"
+                    ],
+                    "outputs": [
+                        " In Animal Farm, Frederick deceives Napoleon by buying a pile of timber from him and paying for it with fake money. The timber is then sold for real money, leaving Napoleon feeling foolish and betrayed."
+                    ],
+                    "expected": "Napoleon is a fictional character and the main antagonist in George Orwell 's Animal Farm .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many days it take for neptune to orbit once"
+                    ],
+                    "outputs": [
+                        " It takes Neptune approximately 165 Earth years to complete one orbit of the Sun."
+                    ],
+                    "expected": "NEPTUNE logo",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many 1969 dodge coronets were made?"
+                    ],
+                    "outputs": [
+                        " Approximately 325,000 1969 Dodge Coronets were made, with the highest production in the United States."
+                    ],
+                    "expected": "The Coronet was a full-size car from Dodge in the 1950s, initially the division's highest trim line but, starting in 1955, the lowest trim line .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how far is a league"
+                    ],
+                    "outputs": [
+                        " A league is traditionally considered to be three miles, though the exact distance may vary slightly depending on the region."
+                    ],
+                    "expected": "A league is a unit of length (or, rarely, area ).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many mhz is ARM9 base"
+                    ],
+                    "outputs": [
+                        " The ARM9 processor has a base speed of 266 MHz."
+                    ],
+                    "expected": "ARM9 is an ARM architecture 32-bit RISC CPU family.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does it mean to be a commonwealth state"
+                    ],
+                    "outputs": [
+                        " A commonwealth state is a political entity that shares a strong democratic tradition, including recognition of the sovereignty of the people, a commitment to uphold the rule of law and a reverence for personal liberty. These states usually have a close relationship with other Commonwealth countries, as well as a strong belief in the values"
+                    ],
+                    "expected": "Commonwealth is a traditional English term for a political community founded for the common good.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many people died at the pentagon in 9 11"
+                    ],
+                    "outputs": [
+                        " 2,977 people died as a result of the 9/11 attacks, including 125 victims at the Pentagon."
+                    ],
+                    "expected": "The September 11 attacks (also referred to as September 11, September 11th, or 9/11) were a series of four coordinated terrorist attacks launched by the Islamic terrorist group al-Qaeda upon the United States in New York City and the Washington, D.C. area on September 11, 2001.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many people visit crater lake national park each year"
+                    ],
+                    "outputs": [
+                        " Crater Lake National Park sees around 700,000 visitors annually. It's a popular destination for hikers, sightseers, and nature-lovers alike."
+                    ],
+                    "expected": "Crater Lake National Park is a United States National Park located in southern Oregon .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what happened to pink floyd"
+                    ],
+                    "outputs": [
+                        " Pink Floyd were an iconic rock band that were active from the mid 1960s until the early 2000s. They released many classic hits, including \"Wish You Were Here\" and \"The Wall\". In 2014, the surviving members of the band announced that Pink Floyd was officially disbanded."
+                    ],
+                    "expected": "Roger Keith \"Syd\" Barrett (6 January 1946 \u2013 7 July 2006) was an English singer, songwriter, guitarist, and painter, best remembered as a founder member of the band Pink Floyd .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how long can you be in the supreme court"
+                    ],
+                    "outputs": [
+                        " The term length for a Justice of the Supreme Court is for life or until retirement, resignation, or involuntary removal."
+                    ],
+                    "expected": "The Supreme Court of the United States is the highest court in the United States .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what county in texas is conroe located in"
+                    ],
+                    "outputs": [
+                        " Conroe is located in Montgomery County, Texas."
+                    ],
+                    "expected": "Conroe is the seat of Montgomery County and falls within the metropolitan area.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what can sql 2005 do"
+                    ],
+                    "outputs": [
+                        " Microsoft SQL Server 2005 is a powerful relational database system that can store and manage your data. It can be used for data analysis and reporting, website creation and content management, creating data-driven applications and much more."
+                    ],
+                    "expected": "Microsoft SQL Server is a relational database management system developed by Microsoft .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what edition of book of mormon had 103 sections"
+                    ],
+                    "outputs": [
+                        " The 1879 edition of the Book of Mormon had 103 sections."
+                    ],
+                    "expected": "The Book of Mormon is a sacred text of the Latter Day Saint movement , which adherents believe contains writings of ancient prophets who lived on the American continent from approximately 2200 BC to AD 421.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many people were killed in the oklahoma city bombing"
+                    ],
+                    "outputs": [
+                        " On April 19, 1995, 168 people were killed in the Oklahoma City bombing. That tragic day will not be forgotten."
+                    ],
+                    "expected": "The Oklahoma City bombing was a domestic terrorist bomb attack on the Alfred P. Murrah Federal Building in downtown Oklahoma City on April 19, 1995.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how high can enlisted soldiers get in the marines"
+                    ],
+                    "outputs": [
+                        " Enlisted soldiers in the Marine Corps can reach the rank of Sergeant Major, the highest enlisted rank in the Marine Corps, after spending many years in the service."
+                    ],
+                    "expected": "An enlisted rank (also known as an enlisted grade or enlisted rate) is, in most militaries, any rank below that of a commissioned officer or warrant officer .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what a wonderful world covers"
+                    ],
+                    "outputs": [
+                        " What a wonderful world indeed! From the lyrics of Louis Armstrong to the beautiful landscapes of nature, this world is full of wonders that we can all appreciate."
+                    ],
+                    "expected": "What a Wonderful World is a song written by Bob Thiele (as \"George Douglas\") and George David Weiss .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What did movie theaters do for sound before synchronized sound was introduced into film"
+                    ],
+                    "outputs": [
+                        " Before synchronized sound, movie theaters relied on live accompaniment to provide sound to their films. This could include a single performer playing a live piano score or even a full orchestra or band that would provide the music and sound effects for the entire production. As technology improved, this was replaced with the synchronized sound"
+                    ],
+                    "expected": "1908 poster advertising Gaumont 's sound films.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how people live in africa"
+                    ],
+                    "outputs": [
+                        " People living in Africa vary greatly, depending on the area. Cultural practices, economy, and access to resources can all affect the daily life and lifestyle of those living in Africa. In general, however, African life is centered on family, community involvement, and a strong sense of tradition."
+                    ],
+                    "expected": "African people are natives or inhabitants of Africa and people of African descent.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "What group took home the award for best rock album at the Australian Recording Industry Association (ARIA) Music Awards?"
+                    ],
+                    "outputs": [
+                        " At the 2021 Australian Recording Industry Association (ARIA) Music Awards, Powderfinger took home the award for Best Rock Album."
+                    ],
+                    "expected": "The Australian Recording Industry Association Music Awards (commonly known as ARIA Music Awards or ARIA Awards) is an annual series of awards nights celebrating the Australian music industry, put on by the Australian Recording Industry Association (ARIA).",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many for profit colleges in the usa"
+                    ],
+                    "outputs": [
+                        " According to the National Center for Education Statistics, there are approximately 940 accredited for-profit colleges and universities in the United States."
+                    ],
+                    "expected": "For-profit education (also known as the education services industry or proprietary education) refers to educational institutions operated by private, profit -seeking businesses .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how did congress vote on the 22nd amendment"
+                    ],
+                    "outputs": [
+                        " Congress voted to ratify the 22nd Amendment on February 27th, 1951, with a vote of 48 in favor, 16 opposed, and one abstention. This amendment set a limit on the number of terms a president may serve, limiting individual presidents to two four-year terms."
+                    ],
+                    "expected": "Amendment XXII in the National Archives",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many episodes of bo bo bo bo bo bo bo"
+                    ],
+                    "outputs": [
+                        " Bo Bo Bo Bo Bo Bo Bo has 5 episodes."
+                    ],
+                    "expected": "This is an episode guide for the anime series Bobobo-bo Bo-bobo .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what building inside central park"
+                    ],
+                    "outputs": [
+                        " Central Park has a wide array of iconic landmarks, including the Belvedere Castle, the Central Park Zoo, and the Carousel."
+                    ],
+                    "expected": "This article is about the public park in New York City.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what carrier does straight talk use"
+                    ],
+                    "outputs": [
+                        " Straight Talk uses multiple carriers, such as AT&T, T-Mobile, Verizon and Sprint, depending on the plan and location."
+                    ],
+                    "expected": "TracFone Wireless, Inc. is a prepaid wireless service provider operating in the United States including Puerto Rico and the US Virgin Islands and is a subsidiary of Mexico's largest telecommunications provider, Am\u00e9rica M\u00f3vil .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how does a dredge work?"
+                    ],
+                    "outputs": [
+                        " A dredge works by using powerful pumps to suck up sediment from the bottom of a body of water. The sediment is then collected in a hopper to be transported elsewhere. Dredges are often used for removing sediment buildup in shallow ports, canals, and rivers."
+                    ],
+                    "expected": "A grab dredge",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how do former volcanoes affect hydrothermal activity"
+                    ],
+                    "outputs": [
+                        " Former volcanoes can contribute to hydrothermal activity by providing a source of heat. This heat can come from an extensive underground magmatic system which can be tapped into by magma-driven hydrothermal systems. Hydrothermal activity originating from a volcano could include geysers, hot springs,"
+                    ],
+                    "expected": "Cleveland Volcano in the Aleutian Islands of Alaska photographed from the International Space Station , May 2006.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what did benedict arnold die"
+                    ],
+                    "outputs": [
+                        " Benedict Arnold died in London, England on June 14th, 1801 from complications from gout and other ailments. He was buried in an unmarked grave in St. Mary's Church."
+                    ],
+                    "expected": "Benedict Arnold (June 14, 1801) was a general during the American Revolutionary War who originally fought for the American Continental Army but defected to the British Army .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many world series did curt schilling have"
+                    ],
+                    "outputs": [
+                        " Curt Schilling has won three World Series championships. He was part of the Arizona Diamondbacks' championship team in 2001, and he won the title with the Boston Red Sox in 2004 and 2007."
+                    ],
+                    "expected": "Curtis Montague Schilling (born November 14, 1966) is a former American Major League Baseball right-handed pitcher and Video Game developer.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does google don't be evil mean?"
+                    ],
+                    "outputs": [
+                        " Google's \u201cDon\u2019t Be Evil\u201d motto was meant to serve as a reminder that the company and its employees should do the right thing, even if it means sacrificing short-term profits in favor of long-term benefits to all involved. The phrase aims to encourage the use of"
+                    ],
+                    "expected": "Don't be evil is the informal corporate motto (or slogan) of Google .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many star wars movies are there"
+                    ],
+                    "outputs": [
+                        " There are currently nine Star Wars movies that have been released. They include the original trilogy (Episodes IV, V, and VI), the prequel trilogy (Episodes I, II, and III), the sequel trilogy (Episodes VII, VIII and IX), and the standalone movies Rogue One and"
+                    ],
+                    "expected": "Star Wars is an American epic space opera franchise centered on a film series created by George Lucas .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much will a transfusion of platelet apheresis raise the platelet count"
+                    ],
+                    "outputs": [
+                        " A transfusion of platelet apheresis is typically used to raise a patient's platelet count to at least 75,000/microliter or higher. It can also be used to reduce a high platelet count. It is best to speak to your healthcare provider for more information about how this"
+                    ],
+                    "expected": "Plateletpheresis (more accurately called thrombocytapheresis or thrombapheresis, though these names are rarely used) is the process of collecting thrombocytes , more commonly called platelets, a component of blood involved in blood clotting .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many ports are there in networking"
+                    ],
+                    "outputs": [
+                        " In networking, there are usually 4 ports: one for an incoming data connection, one for an outgoing connection, one for power, and one for a modem or other device."
+                    ],
+                    "expected": "In computer networking , a port is an application-specific or process-specific software construct serving as a communications endpoint in a computer's host operating system.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does a fawn eat?"
+                    ],
+                    "outputs": [
+                        " A fawn typically eats plants, including grass, clover, and sometimes twigs and leaves. Fawns have also been known to eat insects, berries, and other fruits."
+                    ],
+                    "expected": "Deer (singular and plural) are the ruminant mammals forming the family Cervidae.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how does the book flatlands related to pre calc"
+                    ],
+                    "outputs": [
+                        " Flatlands is a novel by Edwin A. Abbott that explores the concept of different dimensions. Its themes relate to pre-calculus in that it touches on subjects like calculus, Euclidean geometry, and the concept of infinity. The book provides a unique, abstract perspective on the math concepts studied in"
+                    ],
+                    "expected": "In American mathematics education , precalculus (or Algebra 3 in some areas), is an advanced form of secondary school algebra , and a foundational mathematical discipline.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what area code is 479"
+                    ],
+                    "outputs": [
+                        " 479 is the area code for portions of Northwest Arkansas, including the larger cities of Fayetteville, Springdale, and Rogers."
+                    ],
+                    "expected": "Area code 479 is the telephone area code serving thirteen counties in northwest Arkansas , including the cities of Fort Smith , Fayetteville , Springdale , Rogers and Bentonville : the second, third, fourth, eighth and tenth-largest cities in the state, respectively.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does arraignment mean"
+                    ],
+                    "outputs": [
+                        " An arraignment is a court appearance in which the defendant is formally charged with a crime and asked to enter a plea of guilty or not guilty."
+                    ],
+                    "expected": "Arraignment is a formal reading of a criminal charging document in the presence of the defendant to inform the defendant of the charges against him or her.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what did chaucer do"
+                    ],
+                    "outputs": [
+                        " Chaucer was a prolific English poet who wrote the Canterbury Tales and is often considered the Father of English literature."
+                    ],
+                    "expected": "Geoffrey Chaucer (; c. 1343 \u2013 25 October 1400), known as the Father of English literature , is widely considered the greatest English poet of the Middle Ages and was the first poet to have been buried in Poet's Corner of Westminster Abbey .",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how many electrons can a 1.5 v battery with a capacity of 2.2 AH hold at full charge"
+                    ],
+                    "outputs": [
+                        " A 1.5 V battery with a capacity of 2.2 AH can hold 29,820,000,000,000 electrons at full charge."
+                    ],
+                    "expected": "Various cells and batteries (top-left to bottom-right): two AA , one D , one handheld ham radio battery, two 9-volt (PP3), two AAA , one C , one camcorder battery, one cordless phone battery.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "how much chicago snow did we get in 1979"
+                    ],
+                    "outputs": [
+                        " In 1979, the city of Chicago received a total of 43 inches of snow throughout the year."
+                    ],
+                    "expected": "The Chicago Blizzard of 1979 was a major blizzard that affected northern Illinois and northwest Indiana , U.S. on January 13 \u2013 January 14, 1979.",
+                    "meta": null,
+                    "args": null
+                },
+                {
+                    "inputs": [
+                        "what does am and pm stand for"
+                    ],
+                    "outputs": [
+                        " AM stands for \"ante meridiem\" which means \"before noon\" and PM stands for \"post meridiem\" which means \"after noon\"."
+                    ],
+                    "expected": "The 12-hour clock is a time convention in which the 24 hours of the day are divided into two periods: a.m. (from the Latin ante meridiem, meaning \"before midday\") and p.m. (post meridiem, \"after midday\").",
+                    "meta": null,
+                    "args": null
+                }
+            ]
+        }
+    ],
+    "path": "/Users/michaelequi/Github/butter/butter_experiments",
+    "commitId": "a6b2ef82c326c19dcc15cd28feca4d031e3f9389",
+    "branch": "main",
+    "description": ""
+}
