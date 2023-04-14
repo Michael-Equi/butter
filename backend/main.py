@@ -8,6 +8,7 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import randomname
 import datetime
+import threading
 
 app = Flask(__name__)
 
@@ -22,16 +23,8 @@ huggingface_bearer = "Bearer " + os.getenv("HUGGINGFACE_BEARER")
 #test_cases = [['Hi this is a test of how to create a test case. We will be looking at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very cool!', 'This is a test to see how well we can measure semantic and word similarity, TFID, word distributions, and other metrics. Lets check it out!', "Oi, this be a test of 'ow to create a test case. We'll be 'aving a peek at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very marvy!", "Let's examine the semantic and word similarity, Tf-IDF, and word distributions of a sample test. Sounds awesome!"],['Hi this is a test of how to create a test case. We will be looking at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very cool!', 'This is a test to see how well we can measure semantic and word similarity, TFID, word distributions, and other metrics. Lets check it out!', "Oi, this be a test of 'ow to create a test case. We'll be 'aving a peek at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very marvy!", "Let's examine the semantic and word similarity, Tf-IDF, and word distributions of a sample test. Sounds awesome!"],['Hi this is a test of how to create a test case. We will be looking at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very cool!', 'This is a test to see how well we can measure semantic and word similarity, TFID, word distributions, and other metrics. Lets check it out!', "Oi, this be a test of 'ow to create a test case. We'll be 'aving a peek at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very marvy!", "Let's examine the semantic and word similarity, Tf-IDF, and word wefwefieowfjoi of a sample test. Sounds awesome!"]]
 #expected_cases = ['Hi this is a test of how to create a test case. We will be looking at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very cool!','Hi this is a test of how to create a test case. We will be looking at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very cool!','Hi this is a test of how to create a test case. We will be looking at sematic similarity, word similarity, tfid, word distributions, and other metrics. Very cool!']
 
-@app.route('/run_analytics', methods=['POST'])
-def run_analytics_handler():
-    """
-    A post method that handles a request wih the parameter "input" and writes the value of input
-    """
-    # Getting access to database defined above
-    global database
-    db = database
-
-    content = request.json
+def run_analytics(db, content):
+    
     tests = content['tests'] # Array of arrays of test dicts with structure of inputs[] and outputs[]
     # Get create an object id
     test_run_id = ObjectId()
@@ -147,6 +140,23 @@ def run_analytics_handler():
     del content['tests']
     db['TestRun'].insert_one(content)
 
+
+@app.route('/run_analytics', methods=['POST'])
+def run_analytics_handler():
+    """
+    A post method that handles a request wih the parameter "input" and writes the value of input
+    """
+    # Getting access to database defined above
+    global database
+    db = database
+    content = request.json
+
+    # Create a new thread that will run the analytics function
+    analytics_thread = threading.Thread(target=run_analytics, args=(db, content))
+
+    # Start the new thread
+    analytics_thread.start()
+    
     d = {'success': 'True'}
     res_body = json.dumps(d)
     return res_body, 200
