@@ -12,6 +12,7 @@ const magicLink = new MagicLoginStrategy({
   callbackUrl: "/api/auth/magiclink/callback",
   sendMagicLink: async (destination, href, code, req) => {
     const link = `${getRequestOrigin(req)}${href}`;
+    console.log(link)
 
     await sendEmail({
       to: destination,
