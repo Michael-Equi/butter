@@ -177,5 +177,6 @@ yarn-error.log*
 tsconfig.tsbuildinfo
 .yarn/cache
 .yarn/install-state.gz
-packages/next/.yarn
+packages/next/.yarn/cache
+packages/next/.yarn/unplugged
 packages/next/.yarn/install-state.gz
