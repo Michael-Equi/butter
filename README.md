@@ -24,7 +24,7 @@ python setup.py install
 Confirm proper installation by running:
 
 ```
-python -m butter.cli --help
+butter --help
 ```
 TODO: Add documentation about installing / setting up backend
 
@@ -86,10 +86,10 @@ export BUTTER_ID="proejct_id"
 To use the CLI for running tests and uploading results to the project specified by your `BUTTER_ID`, run the following command in the directory that includes your `tests.json` and `test.py` files:
 
 ```
-python -m butter.cli run
+butter run
 ```
 
-Run `python -m butter.cli run --help` for more command options. By default the results are only stored locally if the test fails or you set the `--debug` flag. If you have a results JSON that you want to submit after it has been generated (for example in instances where uploading results fails initially) you can run `python -m butter.cli submit /path/to/file.json`. Make sure your `BUTTER_ID` is set correctly when calling this function.
+Run `butter run --help` for more command options. By default the results are only stored locally if the test fails or you set the `--debug` flag. If you have a results JSON that you want to submit after it has been generated (for example in instances where uploading results fails initially) you can run `butter submit /path/to/file.json`. Make sure your `BUTTER_ID` is set correctly when calling this function.
 
 ## Running Locally
 
