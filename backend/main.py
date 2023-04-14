@@ -60,7 +60,7 @@ def run_analytics_handler():
         for case in test['cases']:
             outputs = case['outputs']
             expected = case['expected']
-            inputs = case['input']
+            inputs = case['inputs']
             semantic_similarities = []
             jaccard_similarities = []
             expected_sentiments = []
@@ -75,10 +75,11 @@ def run_analytics_handler():
                 print('An error occurred:', e)
                 semantic_similarities.append(.5)
             try:
-                jaccard_similarities.append(_jaccard_similarity(outputs[-1], expected))
+                #jaccard_similarities.append(_jaccard_similarity(outputs[-1], expected))
+                jaccard_similarities.append(-1)
             except Exception as e:
                 print('An error occurred:', e)
-                jaccard_similarities.append(.5)
+                jaccard_similarities.append(-1)
             try:
                 expected_sentiments.append(_get_sentiment(expected))
             except:
@@ -108,7 +109,7 @@ def run_analytics_handler():
             running_expected_sentiment += average_expected_sentiment
             running_test_sentiment += average_test_sentiment
 
-            if gpt3_correctness == "CORRECT":
+            if gpt3_correctness[0] == "CORRECT":
                 test_correctness += 1
                 running_correctness += 1
 
@@ -239,6 +240,7 @@ def _gpt3_correctness(question, response, expected):
     )"""
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": final_prompt}])
     
+    print(response.choices[0].message.content)
 
     return response.choices[0].message.content
 
@@ -247,6 +249,6 @@ def _gpt3_correctness(question, response, expected):
 
 
 if __name__ == '__main__':
-    #app.run(debug=True, port=os.getenv("PORT", default=3001))
+    app.run(debug=True, port=os.getenv("PORT", default=3001))
 
-    print(_gpt3_correctness("What is the capital of France?", "Paris", "Paris"))
+    #print(_gpt3_correctness("What is the capital of France?", "Paris", "Paris"))
