@@ -11,6 +11,6 @@ def post_with_json(url, json_file):
 
 url = "http://localhost:3001/run_analytics"
 #url = "https://butter-production.up.railway.app/run_analytics"
-json_file = "test_data_wiki.json"
+json_file = "test_data.json"
 
 post_with_json(url, json_file)
