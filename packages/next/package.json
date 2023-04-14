@@ -122,5 +122,6 @@
   },
   "prisma": {
     "schema": "src/server/db/schema.prisma"
-  }
+  },
+  "packageManager": "yarn@3.5.0"
 }
