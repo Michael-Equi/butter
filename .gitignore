@@ -178,3 +178,5 @@ tsconfig.tsbuildinfo
 .yarn/cache
 .yarn/install-state.gz
 packages/next/.yarn
+
+.butter
