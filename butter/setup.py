@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
    name='butter-cli',
-   version='1.1',
+   version='1.11',
    description='CI/CD for generative AI',
    author='Michael Equi',
    author_email='michaelequi@berkeley.edu',
